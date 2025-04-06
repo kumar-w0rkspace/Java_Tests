@@ -1,0 +1,68 @@
+variables & data types
+
+variable is a container that can hold data
+
+before creating variable we need to mention the data type
+
+Primitive and Non Primitive
+
+Primitive
+byte, short, int, long ---> numbers without decimal
+float, double ---> decimal numbers
+char ---> single character 'x'
+boolean ---> true/ false
+
+
+Non primitive/ Derived/ Collections
+String
+ArrayList
+HashMap
+HashSet etc
+
+
+
+byte        1 byte      -128 to 127
+short       2 bytes     -32,768 to 32,767
+int         4 bytes     -2,147,483,648 to 2,147,483,647
+long        8 bytes     -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+
+float       4 bytes     fractional numbers upto 7 decimal
+double      8 bytes     fractional numbers upto 15 decimal
+
+boolean     1 bit       true or false
+char        2 bytes     Single char / letter
+
+
+
+Java is statically typed prog language
+python is dynamic
+
+
+eg:
+
+int x = 100;
+x="welcome"    // this is not possible in java but can in python
+in java we can change the value, but not the data type
+
+in python we dont specify the data type explicitily
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
