@@ -1,0 +1,89 @@
+Day 4
+=====
+
+Control Statements
+------------------
+
+1) Conditional Statements ---> if, if else, nested if, switch case break
+2) Looping / Iteration ------> while, do while, for loop
+3) jumping Statements -------> break, continue
+
+
+Conditional Statements 
+----------------------
+
+>> if
+>> if else
+>> nested if else
+>> switch case break
+
+
+
+
+if
++++
+
+if (condition)
+{
+    Statements;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if else 
++++++++
+
+if (condition)
+{
+    Statements;
+}
+else
+{
+    Statements;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if else if (if else ladder)
+++++++++++++++++++++++++++
+
+if (condition1)
+{
+    Statements;
+}
+else if (condition 2)
+{
+    Statements;
+}
+else if (condition 3)
+{
+    Statements;
+}
+else if (condition 4)
+{
+    Statements;
+}
+else
+{
+    Statements;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+switch case break
++++++++++++++++++
+
+switch(variable)
+{
+    case value1 : statements;
+        break;
+    case value2 : statements;
+        break;
+    case value3 : statements;
+        break;
+    default : statements;
+}
+
+
+
+
