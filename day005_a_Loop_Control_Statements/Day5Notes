@@ -16,7 +16,6 @@ Where to use what.
 > if you are uncertain about the number of iterations and the loop termination is based on a condition, the while loop is a good choice. (with the help of break keyword)
 
 
-
 while loop
 ++++++++++
 execute the statements inside the while block until the condition is true
@@ -40,7 +39,6 @@ do
     while(condition);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 for loop
 ++++++++
 80 to 90 % of time we use for loop
@@ -61,9 +59,4 @@ Jumping Statements
 > After break, we should not execute any other statement.
 > Continue values will skip the at present value and proceed to the inc/dec. 
 
-
-
-
-
-
-
+-END-
