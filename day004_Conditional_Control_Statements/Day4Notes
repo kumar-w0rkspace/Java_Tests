@@ -18,10 +18,9 @@ Conditional Statements
 >> switch case break
 
 
-
-
 if
 +++
+
 this will be executed only if the condition is true
 
 if (condition)
@@ -33,6 +32,7 @@ if (condition)
 
 if else 
 +++++++
+
 check for condition till its true, or execute the else block 
 
 if (condition)
@@ -112,3 +112,4 @@ switch(variable)
 we switch the variable to check for cases. if any case matches, it will execute the line of code for those case.
 break jumps out of the loop, default is same as else in if else if condition
 
+-END-
