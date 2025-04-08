@@ -1,4 +1,3 @@
-
 Day 3
 =======
 
@@ -26,7 +25,7 @@ increment & decrement   (u) ++ --
 assignment              (u) = += -+ *= /= %=
 conditional / ternary   (t) ?:
 
-
+(u - unary operators, b - binary operators, t - ternary operators)
 
 arithmetic- can only be performed on numbers
 
@@ -51,18 +50,3 @@ eg int x=500, y = 4000;
 		System.out.println(z+ " is largest");
 
 if the expression(x>y) is true, the a value is assigned or else b value is assigned
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
