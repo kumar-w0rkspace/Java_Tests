@@ -1,0 +1,109 @@
+DAY 6
+=====
+
+Arrays
+------
+
+Collection of elements(Homogenious data) of same data type
+{indirectly we can create homo and hetro by creating obj type} //ArrayList (Collections)
+
+We can store multiple values into a single variable.
+
+eg 100 students with ID -- 100 variables of same type
+
+int a[]=new int[5]; --- variableType variableName[Array] = new variable[Arraysize];
+
+every location is addressed by an index umber
+in arrays index number start from 0
+
+if the size of array is 5(n), there will be 5-1(n-1) index number (0,1,2,3,4)
+
+
+2 Types of Array
+
+single dimensional, two dimensional/multi dimensional
+
+
+Single dimensional array (rows)
+-------------------------------
+
+Declaring an array  - int a[]=new int[5]; or int []a
+
+add values into an array - a[0]=100;
+
+find size(Length) of an array - a.length
+
+read single value from an array - System.out.println(a[2]);
+
+read multiple values from an array - for (int i =0;i<=a.length-1;i++) {Sys.O(a[i])}  // using = or <= depends on the array size(n and n-1)
+
+
+two approach for declaring and assigining values to array
+1 variableType variableName[Array] = new variable[Arraysize] - static
+2 variableType variableName[Array] = {Array content} - dynamic
+
+mostly we use second method as its easy and dont waste unnecessary memory, but first method is preffered if the size is fixed
+
+
+two approach for printing multiple elements in array 
+
+for loop  = for (int i =0;i<=a.length-1;i++) {Sys.O(a[i])}
+for.. each loop = for(int x:a) System.out.println(a);  // no need to specify condition, incrementation etc
+
+
+Two Dimensional array (rows and column)
+----------------------------------------
+
+Declaring an array - int a[][]=new int[5][4] or  int [][]a or int []a[]
+
+add values into an array - int b[][]= {	{10,20}, {30,40},  {50,60},  {70,80}		};
+
+find size of a multi array - System.out.println("Length of rows "+b.length); //vertical System.out.println("Length of columns "+b[0].length); //horizontal
+
+read single value from a multi array - System.out.println(a[2][0]);
+
+read multiple values from a multi array - (nested forloop)
+for (int row=0;row<=b.length-1;row++) {             //row loop
+		for (int col=0;col<=b[0].length-1;col++) {     //col loop
+				System.out.println(b[row][col]); } }  //output will be vertical. use sys.op to break line
+						
+enhanced forloop
+
+for (int row[]:b) {
+					for (int col:row) {
+						System.out.print(col+" ");
+					}System.out.println();
+				}
+
+
+
+Debug mode steps
+toggle breakpoint where we want to debug, degub as > java application > F6 for each step > look for variable changes to debug
+
+ArrayList example - Storing different type of data in array
+
+        //To create hetrogenious data in array we need Object type variable
+		//Object is a predefined class in java just like String
+		//It is actually a root class. all other class are derived from same object class. (Superclass)
+
+byte      
+short    
+int       
+long       
+
+float                   OBJECT SuperClass
+double     
+
+boolean     
+char
+
+String 
+
+for (int i=0;i<=a.length-1;i++)
+		System.out.println(a[i]);
+	//
+
+for (Object x:a)
+		System.out.println(x);
+
+-END-
