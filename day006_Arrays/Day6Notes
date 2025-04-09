@@ -63,17 +63,24 @@ find size of a multi array - System.out.println("Length of rows "+b.length); //v
 read single value from a multi array - System.out.println(a[2][0]);
 
 read multiple values from a multi array - (nested forloop)
-for (int row=0;row<=b.length-1;row++) {             //row loop
-		for (int col=0;col<=b[0].length-1;col++) {     //col loop
-				System.out.println(b[row][col]); } }  //output will be vertical. use sys.op to break line
+   for (int row=0;row<=b.length-1;row++)
+ {             //row loop
+	for (int col=0;col<=b[0].length-1;col++)  //col loop
+	{     
+	System.out.println(b[row][col]);
+	 }
+ } 	 //output will be vertical. use sys.op to break line
 						
 enhanced forloop
 
-for (int row[]:b) {
-					for (int col:row) {
-						System.out.print(col+" ");
-					}System.out.println();
-				}
+     for (int row[]:b)
+{
+	for (int col:row)
+	{
+	System.out.print(col+" ");
+	}
+     System.out.println();
+ }
 
 
 
@@ -83,27 +90,29 @@ toggle breakpoint where we want to debug, degub as > java application > F6 for e
 ArrayList example - Storing different type of data in array
 
         //To create hetrogenious data in array we need Object type variable
-		//Object is a predefined class in java just like String
-		//It is actually a root class. all other class are derived from same object class. (Superclass)
+	//Object is a predefined class in java just like String
+	//It is actually a root class. all other class are derived from same object class. (Superclass)
 
-byte      
-short    
-int       
-long       
-
-float                   OBJECT SuperClass
-double     
-
-boolean     
-char
+byte     \ 
+short     \
+int        \
+long        \
+             \
+float         \
+double        / }OBJECT SuperClass 
+             /
+            /
+boolean    /  
+char      /
 
 String 
 
-for (int i=0;i<=a.length-1;i++)
-		System.out.println(a[i]);
-	//
-
-for (Object x:a)
-		System.out.println(x);
+// printing values using for loop for object array
+	for (int i=0;i<=a.length-1;i++)
+	System.out.println(a[i]);
+	 
+// printing with enhanced for loop for object array
+	for (Object x:a)
+	System.out.println(x);
 
 -END-
