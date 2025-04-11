@@ -1,0 +1,88 @@
+DAY 8
+=====
+
+String methods
+--------------
+
+there are certain methods predefined in java for String class
+eg : str.length();
+
+String str = "Welcome";
+String str = new String ("Welcome");
+
+1.length()->
+finding the length of string
+    string.length();
+
+2.concat()->
+adding two strings
+    string1+string2+string3+ ....
+    string1.concat(string2).concat(string3)..etc
+
+3.trim()->
+removing extra spaces (empty spaces before and after string)
+    string1.trim();
+    string1.trim().concat(string2) etc
+
+4.charAt()->
+returns a character from string based on index
+    str1.charAt(index) -index start from 0
+
+5.contains()->
+return type is boolean, important method for validations, case sensitive
+checks if a given string is part of main string or not
+    str1 = "welcome to java class";
+    str2= "e to j";
+    syso(str1.contains(str2));  output is true
+
+eg2 boolean isAvailable = str1.contains(str2);
+    System.out.println(isAvailable);
+
+6.equals() and equalsIgnoreCase()->
+return type is boolean, used for comparing strings
+    System.out.println(str1.equals(str2));
+    equals check if both are same including case sensitivity.
+    equalsIgnoreCase - check if both are same ignoring sensitivity
+
+7.replace()->
+replace single or multiple(sequence) char in a string
+    String str1= "welcome here"
+    sout(str1.replace('e', '?')) = w?lcom? h?r?
+    sout(str1.replace("welcome", "hello")) = hello here
+
+8.subString()->
+extract substring from main string
+    String str1 = new String("Welcome to selenium");
+    System.out.println(str1.substring(1)); // elcome to selenuim - string starts after given index
+    System.out.println(str1.substring(3, 13)); // come to se - string starts and end at the range of index (ending index is always index + 1)
+
+9.case shift->
+shift the case of a string to upper or lower
+    a toUpperCase()
+    b toLowerCase()
+
+10.split()->
+split the string into multiple parts based on delimiter
+substring changes with string length so the code wont be modular
+delimiters usually inclue special chars, @, ., space etc
+
+cant use for delimit * % ^ & ( )
+   String str1 = "xyz.abc@dongmail.com";
+   String str2[] = str1.split("@");  - splits the string into two parts and save in string array
+   System.out.println(str2[0]);  - xyz.abc
+
+splitting into two or more parts
+eg - abc,123@xyz
+
+split with , and save to a string[] which have two parts
+take the second part and split again, concat all elements with proper index
+   String stringeg = "abc,123@xyz";        // abc   123   xyc
+   String streg[] = stringeg.split(",");   // splits to two indices
+   String streg1[] = streg[1].split("@");  // takes the 1st index from streg and split again
+   System.out.println(streg[0]+ " " .concat(streg1[0]+ " ".concat(streg1[1]))); // add with proper index number
+
+eg.xx String name = "John kenedoi";  // see if the name john is part of this name or not ignoring case
+      System.out.println(name.replace('J', 'j').contains("john"));  // 1
+      System.out.println(name.toLowerCase().contains("john"));       // 2
+
+-END-
