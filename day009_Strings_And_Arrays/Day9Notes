@@ -1,0 +1,92 @@
+DAY 9
+=====
+
+Strings and Arrays
+-------------------
+
+1 -
+Reverse a string- No direct method in java to reverse string
+to reverse a string we need to get the last character, then concat it with second last char and so on
+we need two methods here.
+    a. length()
+    b. charAt()
+
+	String str = "String to Reverse";
+	String revStr = "";
+	for (int i = str.length() - 1; i >= 0; i--) 
+	{ 
+ 	  revStr += str.charAt(i);
+	}
+	System.out.println(revStr);
+
+2 -
+By converting string to character array
+using toCharArray() which will convert the entire string into character array.
+eg string "welcome" to char[]a = {'w', 'e', 'l', 'c', 'o', 'm', 'e'}
+
+	String str = "Acer Aspire";
+	String revStr = "";
+	char a[] = str.toCharArray();
+	for (int i = a.length-1; i >= 0; i --) 
+	{
+	  revStr += a[i];
+	}
+	System.out.println(revStr);
+
+in 1 and 2, we use length() for string and length for char
+
+
+3 - 
+By using built in methods Stringbuffer and StringBuilder
+buffer and variable can be used to create a string variable
+     String Str = new String("welcome");
+eg - StringBuffer str = new StringBuffer ("welcome");
+     StringBuilder str = new StringBuilder("Welcome");
+
+buffer syntax->
+	String str = "rando String";
+	StringBuffer strBuff = new StringBuffer(str);
+	System.out.println("Reversed string is " + strBuff.reverse());
+
+builder syntax->
+	String str = "New String for reverse";
+	StringBuilder strBld = new StringBuilder(str);
+	System.out.println("Reversed string is "+ strBld.reverse());
+
+cannot declare like StringBuffer str = "welcome"
+because buffer and builder are mutable objects and string is immutable obj
+
+String mutability and immutability
+---------------------------------
+mutable - changable  //able to use methods to change the original content
+immutable - cant change //not able to use methods to change the original content
+
+append in builder or buffer is same as concat in string
+
+String comparison
+-----------------
+difference between
+  1) == and .equals()
+  2) String str = "welcome";  
+     String str = new String("Welcome");
+
+ == and .equals()
+-----------------
+
+String s1 = "Welcome";
+String s2 = "Welcome";
+
+s1==s2;    // return true
+s1.equals(s2);  // return true
+
+== and .equals acts as same since the way we created the string is without using "new" keyword (creating an object)
+
+	String str1 = new String("welcome");
+	String str2 = new String("welcome");
+    	System.out.println(str1 == str2); //false 
+    	System.out.println(str1.equals(str2)); //true
+
+normally == is used to compare the objects (memory address value)
+.equals() is used to compare the values of object
+
+-END-
