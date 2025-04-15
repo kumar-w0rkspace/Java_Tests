@@ -1,0 +1,63 @@
+DAY 10
+=====
+
+OOPS - Class, Object, Method
+-----------------------------
+
+what is oop language?
+
+if any language supports oop concepts, we can call it as oop language
+
+6 oop concepts
+    -class - blueprint of an object
+    -object - an instance of a class
+    -polymorphism
+    -encapsulation
+    -inheritance
+    -data abstraction
+
+--- Class and Object -----
+basic / foundation concepts
+
+class - collection of attribute(variable) and behaviour(methods) (category / group, a virtual entity)
+class is the blueprint of an object. without class, there is no object
+
+eg - Animal -> dog, cat, horse, etc
+eg - student -> name1, name2, name3 etc
+
+animal is just a name given to a group. the physical entities are dog, cat etc.
+dog cat and horse are objects of animal class
+attributes - height, color, weight etc
+behaviour - way of eating, sleeping, hunting, breeding etc
+
+CLASS
+-----
+1. class is collection of variables and methods
+2. class is a logical entity/ blueprint.
+3. a virtual entity that will not occupy any memory.
+
+class Student
+{
+    variables
+    methods
+}
+
+
+OBJECT
+------
+1. object is an instance of a class / object will be created by using a class
+2. a physical entity
+3. will occupy space in a memory
+4. can create multiple objects for a single class
+
+Student studentOne = new Student(); --> constructor
+Student studentTwo = new Student();
+
+whenever we create an object in a class, the object will acquire a copy of the variables and methods from the class
+each object in a class is different
+the objects should be created inside the main method
+there is only one main method for an entire project
+
+check examples of day10 package
+
+-END-
