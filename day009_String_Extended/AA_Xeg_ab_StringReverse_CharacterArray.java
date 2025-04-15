@@ -1,4 +1,4 @@
-package day009_Strings_And_Arrays;
+package day009_String_Extended;
 
 public class AA_Xeg_ab_StringReverse_CharacterArray {
 

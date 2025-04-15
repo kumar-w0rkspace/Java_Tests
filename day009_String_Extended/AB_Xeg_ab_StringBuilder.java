@@ -1,4 +1,4 @@
-package day009_Strings_And_Arrays;
+package day009_String_Extended;
 
 public class AB_Xeg_ab_StringBuilder {
 
