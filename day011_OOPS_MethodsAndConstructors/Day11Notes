@@ -1,0 +1,149 @@
+DAY 11
+=====
+
+Methods & Constructors in java
+-------------------------------
+
+Method
+------
+group of statements or block of code that performs certain tasks
+
+WHY?
+instead of writing a task again and again we will create a method and call it whenever we need
+
+once we create an object of the class, we can call the method
+
+2 method types in java
+Built in methods and user defined methods
+
+Just writing method is not enough. we need to call the method through the object of the class
+4 types of methods depending on the inputs and return types
+
+1> No parameter / No return value
+2> No parameter / Return Value
+3> Takes parameter / No return value
+4> Takes parameter / Returns value
+
+
+examples - 
+
+1> No parameter / No return value
+
+public class Greetings 
+{
+  void firstGreeting()  // 'No return value' should be void
+  {
+  System.out.println("Hello again");
+  }
+}
+
+Main method > 
+public static void main(String[] args) 
+{
+ Greetings grOne = new Greetings(); // creating object of class Greetings
+ grOne.firstGreeting(); // calling the method firstgreetings from Greetings class
+}
+
+
+2> No parameter / Return Value
+
+  String secondMethod()
+  {
+  return "Hello Second Method";
+  }
+
+Main method > 
+  String str = grOne.secondMethod();
+  System.out.println(str);  // need to put it in a variable since we secondMethod is returning a string
+
+
+3> Takes parameter / No return value
+
+  void thirdMethod(String name)
+  {
+    System.out.println("Hello "+ name);
+  }
+
+Main method >
+    grOne.thirdMethod("Jack"); //takes an input string name
+
+4> Takes parameter / Returns value
+
+String fourthMethod(String name)
+  {
+    return "Hello " + name;
+  }
+
+Main method >
+    System.out.println(grOne.fourthMethod("Ramei"));// avoiding creating new variable
+	
+
+Ways to store data into variables -
+------------------------------------
+1 > using object reference variable
+
+        stuOne.stuName = "Morenh";
+	stuOne.stuID = 1342;
+	stuOne.stuGrade = 'A';
+
+2 > using method
+
+	void setStudentData(String name, int id, char grade) // local variables
+	{ 
+	stuName = name;
+	stuID = id;
+	stuGrade = grade;
+	}
+Main > 
+	Student stuTwo = new Student();
+	stuTwo.setStudentData("Jobh", 1234, 'B');
+
+3 > using constructor (like a method)
+	>constructor name should be same as class name
+	>constructor cannot return any value (no return type)
+	>constructor can take parameter like a method
+	>constructor is only for initializing data to variables (no programming logics)
+	
+        Student(String name, int id, char grade) // constructor in the name of class Student
+	{   
+	  stuName = name;
+	  stuID = id;
+	  stuGrade = grade;
+	}
+
+Main > 
+	Student studentOne = new Student("Roney", 198, 'A');
+
+if we want to just assign data into variables, constructors is preferred 
+if we want to operate on the data, then we need methods
+
+
+DIFFERENCE B/W METHOD AND CONSTRUCTOR 
+
+Method
+------
+
+1. Method name can be anything
+2. Method may or may not return a value
+3. If method don't return any value, specify void
+4. Method can take parameters/ arguments
+5. We have to invoke / call method explicitly through object
+6. Used for specifying the logic
+
+Constructor
+-----------
+
+1. Constructor name should be same as class name
+2. Constructor will never return a value (not even void)
+3. We don't usually specify void either
+4. Constructor can take parameters/ arguments
+5. Constructor is automatically invoked at the time of object creation
+6. Used for initializing values for variables
+
+
+Constructor - 2 types
+
+default         Student() {}   //no parameters
+parameterised   Student(name, age, id) {}  // have parameters
+
+-END-
