@@ -1,0 +1,214 @@
+DAY 12
+=====
+
+Polymorphism
+-------------
+
+One thing having many forms is having polymorphism
+
+eg water --> ice, steam, vapour etc
+
+We can achieve polymorphism in java using Method Overloading
+
+2 types of overloading
+  > method overloading
+  > constructor overloading
+
+
+4 Rules for overloading
+
+1> Method name should be same
+2> Number of parameters should be different
+3> Data type parameters should be different
+4> Order of parameters should be different
+5> Return type is not considered
+
+
+Why we need overloading?
+------------------------
+
+Type 1
+
+addTwo (int a, intb)                      --->  addTwo(10, 20)
+addThree (int a, int b, int c)            --->  addThree(10, 20, 30)
+addFour (int a, int b, int c, int d)      --->  addFour(10, 20, 30, 40)
+
+By this way, the user need to remember the method names to invoke them properly
+
+Type 2
+
+add (int a, intb)                  --->  add(10, 20)
+add (int a, int b, int c)          --->  add(10, 20, 30)
+add (int a, int b, int c, int d)   --->  add(10, 20, 30, 40)
+
+By this way, it is easier for user to just call the add method and invoke as needed
+
+
+Example - method overloading
+---------------------------
+
+class Overloading 
+  {
+int a = 10, b = 20;
+
+	void sum() // type 1
+	{ 
+	syso(a+b)
+	}
+
+	void sum(int a, int b) // Type 2
+	{
+	syso(a+b)
+	}
+
+	void sum(int a, double b) // Type 3
+	{
+	syso(a+b)
+	}
+ 
+	void sum(double a, int b) // Type 4
+	{
+	syso(a+b)
+	}
+
+	void sum(int a, int b, int c)  // Type 5
+	{
+	syso(a+b+c)
+	}
+
+  }
+
+________Main________
+
+Overloading add = new Overloading(); // object instantiation
+
+add.sum() // Type 1
+
+add.sum(10, 20) // Type 2
+
+add.sum(10, 12.5) // Type 3
+
+add.sum(15.5, 20) // Type 4
+
+add.sum(10, 20, 30) // Type 5
+
+
+
+Example - Constructor overloading
+---------------------------------
+
+
+public class Box
+{
+   double width, height, depth;
+
+	 Box() // constructor
+	{
+	  width = height = depth = 0;
+	}
+
+	  Box(double w, double h, double d) // constructor overloaded
+	{
+          width = w;
+          height = h;
+          depth = d;
+    	}
+
+	 Box(double len)  // constructor overloaded
+	{
+         width = height = length = len;
+	}
+
+        double volume()  // a method defined for volume
+	{
+           return width*height*depth;
+        }
+}
+
+psvm
+{
+
+    Box b1 = new Box();
+    Box b2 = new Box(10.5, 5.5, 4.2);
+    Box b3 = new Box(5.2);
+}
+
+>> Can we overload main method?? <<
+            YES WE CAN
+
+Eg:- public class Main_Overloading
+{
+	void main (int a)  // overload 1
+	{
+        syso(a);
+	}
+    
+   	 void main (String name) // overload 2
+	{
+        syso(name);
+    	}
+
+   	void main (String name1, String name2) // overload 3
+	{
+        syso(name1+ name2);
+    	}
+}
+ _____MAIN METHOD_____
+    public static void main (String [] args) 
+{
+    Main_Overloading myMain = new Main_Overloading();
+    myMain.main(50); // overload 1
+    myMain.main("Jack"); // overload 2
+    myMain.main("James", "John"); // overload 3
+}         
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Encapsulation
+------------
+
+The wrapping of data and methods into single unit(class)
+
+We can access the variables in the class only through the methods from object of the class
+
+1> All variables should be private
+2> For every variable, there should be two methods - get and set
+3> Variables can be operated only through methods
+
+public class Bank_Account
+{
+  private String acName;  ---> encapsulation using private keyword
+  private int acNo;
+
+	void setAcName(String acName)  // setter method
+	{
+    	this.acName = acName;  // this keyword points to the Bank_Account class variable
+	}
+
+	String getAcName() // getter method
+	{
+    	return acName;
+	}
+
+	void setAcNo(int acNo)  // setter method
+	{
+    	this.acNo = acNo;
+	}
+
+	int getAcNo() // getter method
+	{
+    	return acNo;
+	}
+}
+
+MAIN METHOD
+{
+	Bank_Account userOne = new Bank_Account();
+	userOne.setAcName("James");
+	userOne.setAcNo(134523);
+	syso(userOne.getAcName()+ " " + userOne.getAcNo());
+}
+
+NOTE - 'this' keyword is refering to the Bank_Account class
+
+-END-
