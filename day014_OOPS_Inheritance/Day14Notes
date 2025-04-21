@@ -1,0 +1,46 @@
+Day14
+=====
+
+Inheritance
+-----------
+
+>Acquiring all the properties (variables) and behaviour (methods) of one class to another class is inheritance
+>We can enable inheritance using the keyword 'extends'
+
+class A
+{
+  variables
+  methods
+}
+
+class B extends A
+{
+  variables of class A and B
+  methods of class A and B
+}
+
+Here class A is called the parent / base / super class
+class B is called child / sub / derived class
+
+
+Advantage of inheritance
+------------------------
+>> Reusability
+>> Avoid duplication
+
+4 Types on inheritance
+    1> single
+    2> multi level
+    3> hierarchy
+    4> multiple  -- cannot be implemented by class, but can be done by interface
+
+why class don't support multiple inheritance?
+
+1> class A extends B , C ==> syntactically wrong
+2> If both parents have same method, child will have ambiguity problems - means child don't know which method to acquire
+3> Even if there are no methods defined, still its not possible because all classes in Java extends from Object class
+
+>>>In one java file, there will be only one class having public access modifier<<<
+check day14 for examples
+
+-END-
