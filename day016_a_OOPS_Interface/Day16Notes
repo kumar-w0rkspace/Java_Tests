@@ -1,0 +1,154 @@
+Day16
+======
+
+Abstraction - 
+-----------
+
+>Process of hiding implementation details and only showing functionality to the user.
+>For security and privacy reasons
+
+2 ways to implement abstraction
+ - Abstract class (not 100%)
+ - Interface (100%)
+
+Interface-->
+    >> Blueprint of a class
+    >> Contains only final and static variables- even if we don't mention it, its still final and static by default
+    >> Interface contains abstract methods (Also allowed default methods & static methods from java 8 onwards)
+    >> An abstract method is a method that contains signature but not body (un implemented methods)
+    >> Methods in interface are public
+    >> Interface supports the functionality of multiple inheritance
+    >> We can define interface with interface keyword
+    >> A class extends another class, an interface extends another interface; but a class implements an interface
+    >> We can create object reference for interface, but we cannot instantiate interface
+	eg - Car myCar = new Car()
+        here myCar = Object reference (name)
+        new Car() = instantiation
+        Interface iCar = new Car(); -> this is possible
+
+Earlier days, software developers start developing the software just when they get the requirements. design will come later.
+so with the requirement, they will just make the interfaces with basic methods and no parameters.
+later when design comes, they will create classes and define those methods.
+
+Multiple Inheritance
+--------------------
+
+We can achieve multiple inheritance through interfaces.
+eg -
+
+interface One
+{
+   int x = 100;
+   void m1();
+}
+    
+interface Two 
+{
+    int y = 200;
+    void m2();
+}
+
+class Child implements One, Two
+{
+   void m1()
+   {
+    syso(x)
+   }
+
+   void m2()
+   { 
+    syso(y) 
+   }
+psvm 
+{
+	Child ch = new Child();
+        ch.m1; // method from interface One
+        ch.m2; // method from interface One
+}
+
+Hybrid inheritance
+-------------------
+
+a mix of multiple inheritance and hierarchy inheritance. 
+
+eg -
+interface One
+{
+   int x = 100;
+   void m1();
+}
+    
+interface Two 
+{
+   int y = 200;
+   void m2();
+}
+
+class Parent
+{
+   int z = 500;
+   void m3();
+   {
+    syso(z); 
+   } 
+}
+
+class Child extends Parent implements One, Two 
+{
+	void m1();
+	{
+        syso(x);
+	}
+        void m2();
+	{ 
+        syso(y);
+	}
+
+
+psvm
+{
+	Child ch = new Child();
+        ch.m1; // method from interface One - parent 1
+        ch.m2; // method from interface Two - parent 2
+        ch.m3; // method from class parent  - parent 3
+}
+
+
+Abstract vs Interface
+---------------------
+
+Abstract class
+    > can have abstract and non abstract methods
+    > Don't support multiple inheritance
+    > can have final, non final, static and non static variables
+    > can provide implementation of interface
+    > Abstract keyword to declare
+    > Can extend another java class and implement multiple java interface
+    > can be extended using the keyword extends
+    > can have members like private, protected etc
+eg:-
+public abstract class Shape
+{
+   public abstract void draw()
+   {
+   }
+}
+
+Interface class
+    > can have only abstract methods (default and static from java 8)
+    > supports multiple inheritance
+    > only static and final variables
+    > cant provide implementation to abstract class
+    > interface keyword to declare
+    > can extend another java interface only
+    > can be implemented using keyword implements 
+    > members of interfaces are public by default
+eg:-
+public interface Drawable
+{
+  void draw()
+  {
+  }
+}
+
+-END-
