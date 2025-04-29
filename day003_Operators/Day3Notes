@@ -18,7 +18,7 @@ a, b are operands
 different type of operator
 
 arithmetic operators    (b) + - * / %
-relational/ comparison  (b) > < >= <= != ==
+relational/ comparison  (b) > >= <= != ==
 logical                 (b) && || !(u)
 increment & decrement   (u) ++ --
 assignment              (u) = += -+ *= /= %=

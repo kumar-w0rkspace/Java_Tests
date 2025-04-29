@@ -63,13 +63,13 @@ find size of a multi array - System.out.println("Length of rows "+b.length); //v
 read single value from a multi array - System.out.println(a[2][0]);
 
 read multiple values from a multi array - (nested forloop)
-   for (int row=0;row<=b.length-1;row++) //row loop
- {             
+   for (int row=0;row<=b.length-1;row++)
+ {             //row loop
 	for (int col=0;col<=b[0].length-1;col++)  //col loop
 	{     
-	System.out.println(b[row][col]); //output will be vertical. use sys.op to break line
+	System.out.println(b[row][col]);
 	 }
- } 	 
+ } 	 //output will be vertical. use sys.op to break line
 						
 enhanced forloop
 
