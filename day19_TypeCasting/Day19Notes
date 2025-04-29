@@ -1,0 +1,185 @@
+Day19
+=====
+
+Typecasting
+----------
+Means converting the data from one type to another type
+
+Primitive typecasting
+---------------------
+
+2 kinds of Typecasting for primitve and object types
+
+    >Upcasting / widening (Automatic process)
+      Converting value from smaller to higher
+      eg - int to long
+
+    >Downcasting / narrowing (not automatic)
+      Converting value from higher to smaller
+      eg - short to byte
+
+upcasting eg
+    int x = 100;
+    long l = x; // auto upcasting
+
+    float f = 10.22F;
+    double d = f; // auto upcasting
+
+downcasting eg
+    long l = 12345667;
+    int i = l // not possible since long is bigger than int. we need to explicitly change the datatype
+    int i = (int) l; // correct downcasting
+
+    double d = 12.3231341;
+    float f = (float) d; // while reducing to smaller datatype, there is a possibility of data loss or truncation
+
+Object Typecasting
+------------------
+
+class Parent
+{
+
+ String name = "james";
+ void m1()
+    {
+      syso("m1 from parent");
+    }
+}
+
+class Child extends Parent
+{
+
+ int id = 123;
+ void m2()
+    {
+    syso("m2 from child");
+    }
+}
+
+//________Main Method________
+psvm
+{
+  Child ch = new Child();
+  ch.name // Parent class variable
+  ch.m1(); // method from parent class
+  ch.id; // variable from child class
+  ch.m2(); // method from child class
+
+//upcasting
+    Parent pr = new Child(); //Upcasting - parent class reference variable can always hold child class obj
+    pr.name // parent class variable
+    pr.m1(); // parent class method
+    pr.id; // not accessible
+    pr.m2(); // not accessible
+
+//downcasting
+    Parent pr = new Parent();
+    Child ch = (Child)pr // valid downcasting
+    ch.name // Parent class variable
+    ch.m1(); // method from parent class
+    ch.id; // variable from child class
+    ch.m2(); // method from child class
+
+// Note - when to use
+>Child ch = new Child(); >> we use this when we know what datatype is to be expected
+>Parent pr = new Child(): >> we use this when we dont know what datatype is to be expected, so we use the parent class
+
+
+3 rules to follow while downcasting to avoid errors
+
+Cat ct = (Cat) an
+ A   b     C    d
+A and C are classes, b and d are variables
+
+Rule 1 -> C and d should be same or must have a relationship (Valid conversion or not)
+Rule 2 -> C must be either same or child of A (Assignment is valid or not)
+Rule 3 -> The underlying object of d must be either same or child of C
+
+>>If rule 1 and rule 2 fails, we get compile time exception. If rule 3 fails, the program will execute, but we get runtime exception<<
+
+class Animal {}
+class Dog extends Animal {}
+class Cat extends Animal {}
+
+//____________Main Method________
+    psvm
+    {
+    // Rule 1
+    Animal an = new Dog();
+    Cat ct = (Cat) an; // valid as per rule 1, (Cat) is having relation to an
+
+    Dog dg = new Dog();
+    Cat ct = (Cat) dg; // invalid as per rule 1, since (Cat) and dg have no direct relation
+
+    // Rule 2
+    Animal an = new Dog();
+    Cat ct = (Cat) an; // valid as per rule 2, since we are saving the (Cat) type to Cat class
+    
+    Animal an = new Dog();
+    Cat ct = (Dog) an; // invalid as per rule 2, since we are saving converted (Dog) object into Cat class
+
+    // Rule 3
+    Animal an = new Dog();
+    Cat ct = (Cat) an; // invalid as per rule 3, since the underlying object of an is Dog and dont have any relation with Cat
+
+    // All rules test
+    Animal an = new Dog();
+    Dog dg = (Dog) an; // valid as per rule 1 2 and 3
+
+    }
+
+Type casting for predefined classes
+-----------------------------------
+// A b = C d (Typecasting rules)
+
+psvm
+{
+
+// ex 1
+    Object o = new String("Welcome");
+    StringBuffer sb = (StringBuffer) o;
+    // Rule 1 - Conversion >> pass >> there is relation between o and (StringBuffer)
+    // Rule 2 - Assignment >> pass >> StringBuffer to StringBuffer
+    // Rule 3 - Underlying Object relation >> fail >> No relation between string and StringBuffer
+
+
+// ex 2
+    String s = new String("Welcome");
+    StringBuffer sb = (StringBuffer) s;
+    // Rule 1 >> fail
+
+// ex 3
+    Object o = new String("Welcome");
+    StringBuffer sb = (StringBuffer) o;
+    // Rule 1 >> pass
+    // Rule 2 >> pass
+    // Rule 3 >> fail (StringBuffer no relation to String)
+
+// ex 4
+    Object o = new String("Welcome");
+    StringBuffer sb = (String) o;
+    // Rule 1 >> pass
+    // Rule 2 >> fail (String to stringbuffer)
+
+// ex 5
+    String s = new String("Welcome");
+    StringBuffer sb = (String) s;
+    // Rule 1 >> pass
+    // Rule 2 >> fail (String to stringbuffer)
+
+// ex 6
+    Object o = new String("Welcome");
+    StringBuffer sb = (StringBuffer) o;
+    // Rule 1 >> pass
+    // Rule 2 >> pass
+    // Rule 3 >> fail (no relation between string and stringbuffer)
+
+// ex 7
+    Object o = new String("Welcome");
+    String s = (String) o;
+    // Rule 1 >> pass
+    // Rule 2 >> pass
+    // Rule 3 >> pass
+}
+
+-END-
