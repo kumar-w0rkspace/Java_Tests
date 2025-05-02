@@ -113,7 +113,7 @@ iterator loop---
          {
           syso(itr.next)
          }
-we use while loop because we dont know when the hasNext() method will turn true.
+we use while loop because we dont know when the hasNext() method will turn false.
 since we need all the elements in the arraylist, we use while loop
 
 hasNext() -> 1. go to next element after each iteration
@@ -192,7 +192,7 @@ iterator loop---
          {
           syso(itr.next)
          }
-we use while loop because we dont know when the hasNext() method will turn true.
+we use while loop because we dont know when the hasNext() method will turn false.
 since we need all the elements in the HashSet, we use while loop
 
 hasNext() -> 1. go to next element after each iteration
