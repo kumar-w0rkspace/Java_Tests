@@ -1,0 +1,274 @@
+Day 20
+======
+
+Collection and Map
+-------------------
+
+
+Collection (root interface of all collection type)
+-----------
+Collection - a group of elements / items/ objects
+
+>>Collection is an interface(java.util), Collections is a class<<
+
+Collection is again set into List and Set
+
+        Collection (I)                      Map(I)
+           /  \                               |
+          /    \                              |
+         /      \                          HashMap(C)
+        /        \                          
+    List (I)    Set (I)                     
+        |         |
+        |         |
+        |         |
+  ArrayList(C)   HashSet(C)
+
+>>List interface is implemented by ArrayList
+Set interface is implemented by HashSet
+
+>>there are some common methods in List and Set interfaces
+similarly there are some common methods in ArrayList and HashSet
+
+>>ArrayList specific methods might not be in HashSet and viceversa
+
+>>there are more collections class - linkedlist, hashlinkedlist etc
+
+>We can store object type of data in collections(predefined / userdefined).
+>We CANNOT store primitive type data in collections
+>We can use wrapper class type to store primitive type (not needed for String which is non Primitive)
+
+ArrayList
+~~~~~~~~~~
+Properties
+
+1> Heterogenious data   -> allowed
+2> Insertion order      -> Index preserved (Orderly saving which inturn gives us index to target) 
+3> Duplicate elements   -> Allowed
+4> Multiple nulls       -> Allowed
+
+Decleration of Heterogenious data
+
+Type 1 > ArrayList myArrayList = new ArrayList();
+Type 2 > List myArrayList = new ArrayList();
+
+Declaration of Homogenious data
+
+Eg for integer type > ArrayList<Integer> myIntList = new ArrayList<Integer>();
+Eg for string type  > ArrayList<String> myStrList = new ArrayList<String>();
+Eg for Employee type > ArrayList<Employee> myEmpList = new ArrayList<Employee>(); 
+
+Adding objects to ArrayList
+    myArrayList.add("Name");
+    myArrayList.add(123);
+    etc
+
+Index value and add value
+    myList.add(4, 'A");// will add char A to the 4th index
+// add() method is overloaded
+
+Removing value
+    myList.remove(index); 
+
+Find size of ArrayList
+    myArrayList.size();
+
+Change or modify
+    myArrayList.set(1, 100) // will modify the current value at index 1 to 100
+    myArrayList.set(4, "James") // will modify the current value at index 4 to "James"
+
+Printing single element
+    myArrayList.get(index); // prints the value at index
+
+Clear all elements from list
+    myArrayList.clear
+
+Remove selected items from list
+    ArrayList myRemoveList = new ArrayList();
+    myRemoveList.add(myArrayList.get(1)) // adding 1st index element from main list to remove list
+    myRemoveList.add)myArrayList.get(3)) // adding 3st index element from main list to remove list
+    MyArrayList.removeAll(myRemoveList); // removing elements in myRemoveList from MyArrayList
+
+Checking if the arraylist is empty or not
+    myArrayList.isEmpty(); // true if no elements in array
+
+
+Reading data from ArrayList
+
+forloop----
+    for(int i = 0; i<myArrayList.size(); i++)
+     {
+        Syso(myArrayList.get(i)); // 
+     }
+
+foreach loop---
+    for(Object obj:myArrayList) 
+      {
+        syso(obj);        
+      }
+
+iterator loop---
+     Iterator<Object> myItr = myArrayList.iterator(); // angular bracket is optional to specific type
+        while (itr.hasNext())
+         {
+          syso(itr.next)
+         }
+we use while loop because we dont know when the hasNext() method will turn true.
+since we need all the elements in the arraylist, we use while loop
+
+hasNext() -> 1. go to next element after each iteration
+             2. check if element exist or not
+
+next() -> get the element
+
+
+HashSet
+~~~~~~~
+Properties
+
+1> Heterogenious data   -> Allowed
+2> Insertion Order      -> Index not preserved // Hashing - No proper order maintained since itll store data whereever memory is free
+3> Duplicate elements   -> Not Allowed
+4> Multiple null        -> Not Allowed
+
+Decleration of Heterogenious data
+
+Type 1 > HashSet myHashSet = new HashSet();
+Type 2 > Set myHashSet = new HashSet();
+
+Declaration of Homogenious data
+
+Eg for integer type > HashSet<Integer> myIntList = new HashSet<Integer>();
+Eg for string type  > HashSet<String> myStrList = new HashSet<String>();
+Eg for Employee type > HashSet<Employee> myEmpList = new HashSet<Employee>(); 
+
+Adding objects (will not be in order)
+    myHashSet.add("Name");
+    myHashSet.add(123);
+    myHashSet.add("Name"); // duplicate not allowed. if forced duplication, itll show one value from duplicates
+    etc
+
+Printing the hashset
+    syso(myHashSet) // random order, remove duplicates
+
+Removing element from HashSet
+    myHashSet.remove(value); // here no index concept, so we need to give the value to remove
+
+Inserting element
+    >>Inserting elements into hash collections, is simply not possible. since its not following indexing order<<
+
+Access Specific element
+    >>Accessing elements from hash collections, is simply not possible. since its not following indexing order<<
+
+Converting HashSet collection into ArrayList collection (workaround for adding index to an existing hashset)
+    ArrayList myArrayListTemp = new ArrayList(myHashSet);
+    myArrayListTemp.remove(index);
+    myArrayListTemp.add(index, value);
+    myArrayListTemp.get(index);
+
+Size of set
+    myHashSet.size();
+
+Clearing all elements from set
+    myHashSet.clear();
+
+Check if the set is empty or not
+    myHashSet.isEmpty();
+
+
+Reading data from ArrayList
+
+forloop---- not possible since there is no index
+    
+foreach loop---
+    for(Object obj:myHashSet) 
+      {
+        syso(obj);        
+      }
+
+iterator loop---
+     Iterator<Object> myItr = myHashSet.iterator(); // angular bracket is optional to specific type
+        while (itr.hasNext())
+         {
+          syso(itr.next)
+         }
+we use while loop because we dont know when the hasNext() method will turn true.
+since we need all the elements in the HashSet, we use while loop
+
+hasNext() -> 1. go to next element after each iteration
+             2. check if element exist or not
+
+next() -> get the element
+
+
+Map collection
+--------------
+
+HashMap
+~~~~~~~
+>We can store data in the form of key and value in a pair
+>Other than hashmap, all types of collections are derieved from collection interface
+>HashMap is derieved from Map Interface
+
+>> The idea of hashmap is that they are a combination of Key, Value which is a pair <<
+Note - 1> The key shouldnt be repeated (If repeated with a value, then the recent value will be saved)
+       2> The values can be repeated
+       3> Insertion order is not preserved (Dont follow index)
+
+Declaring a HashMap
+    HashMap hm = new HashMap();
+    Map myMap = new HashMap();
+
+Declaring a hashmap with key and valye type
+    HashMap<Integer, String> hm = new HashMap<Integer, String>();
+        
+Adding pairs
+    hm.put(123, "James"); // key and value
+    hm.put(124, "Moaeg");
+
+Printing the map
+    syso(hm); // {123=James, 124=Moaeg}
+
+Size of the map
+    hm.size(); // gives the value of total pairs
+
+Remove a pair
+    hm.remove(key);
+
+Access value of key
+    hm.get(key);
+
+Access all the keys
+    hm.keySet(); // keys in the form of set
+
+Access all the values
+    hm.values(); // values in the form of set
+
+Access keys along with values
+    hm.entrySet(); // [123=James, 124=Moaeg]
+
+Clearing hashmap
+    hm.clear();
+
+Checking if hashmap is empty
+    hm.isEmpty(); // returns a boolean
+
+Reading the whole pair of data by looping
+
+forloop---- not possible since there is no index
+    
+foreach loop---
+    for(int i : hm.keySet()) 
+      {
+        syso(i + " " + hm.get(i));        
+      }
+
+iterator loop---
+    Iterator <Entry <Integer, String>> itr=hm.entrySet().iterator(); // adjusting return type for entryset 
+      while(itr.hasNext())
+       {
+        Entry<Integer, String> entry = itr.next(); // each iteration, we get a result called entry with variable type Entry with Integer and String combination
+        syso(entry.getKey()+ " " + entry.getValue()); // the entry.getkey and entry.getvalue is called for each iteration             
+       }
+
+-END-
