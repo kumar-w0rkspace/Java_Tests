@@ -3,36 +3,36 @@ Core Java
 
 Repo of core java concepts done in sessions
 
-Topics-->
+>>Topics-->
 
-> Hello Java
+	> Hello Java
 
-> Variables & Data Types
+	> Variables & Data Types
 
-> Operators
+	> Operators
 
-> Control Statements
+	> Control Statements
 
-> Arrays
+	> Arrays
 
-> Scanner
+	> Scanner
 
-> String Methods
+	> String Methods
 
-> Data Conversion
+	> Data Conversion
 
-> Packages
+	> Packages
 
-> Access Modifiers
+	> Access Modifiers
 
-> Exception Handling
+	> Exception Handling
 
-> Typecasting
+	> Typecasting
 
-> Collections
+	> Collections
 
  
-> OOPS -->
+>> OOPS -->
 
 	Class
 
