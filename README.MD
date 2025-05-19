@@ -1,7 +1,7 @@
-Core Java
-=========
+Core Java (java 21.0.1)
+=======================
 
-Repo of core java concepts done in sessions
+Core concepts done in sessions
 
 >>Topics-->
 
