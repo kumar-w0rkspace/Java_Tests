@@ -1,12 +1,13 @@
 Day 20 - Collection and Map
 ===========================
 
-Collection (root interface of all collection type)
--------------------------------------------------
 Collection
-	A group of elements / items/ objects
-	>>Collection is an interface(java.util)<<
-	>>Collections is a class<<
+''''''''''
+
+A group of elements / items/ objects
+Collection is an interface(java.util)
+Root interface of all collection type
+>>Collections is a class<<
 
 Collection is again classified into List and Set
 
@@ -87,19 +88,19 @@ Checking if the arraylist is empty or not
     	myArrayList.isEmpty(); // true if no elements in array
 
 Reading data from ArrayList
->>forloop----
+>>forloop=>
     	for(int i = 0; i<myArrayList.size(); i++)
      	{
           Syso(myArrayList.get(i)); // 
      	}
 
->>foreach loop---
+>>foreach loop=>
     	for(Object obj: myArrayList) 
       	{
           syso(obj);        
       	}
 
->>iterator loop---
+>>iterator loop=>
 	Iterator<Object> myItr = myArrayList.iterator(); // angular bracket is optional to specific type
         while (itr.hasNext())
         {
@@ -165,22 +166,22 @@ Clearing all elements from set
 Check if the set is empty or not
     	myHashSet.isEmpty();
 
-
 Reading data from ArrayList
-forloop---- not possible since there is no index
+forloop=> not possible since there is no index
     
-foreach loop---
+foreach loop=>
 	for(Object obj:myHashSet) 
       	{
           syso(obj);        
       	}
 
-iterator loop---
+iterator loop=>
      	Iterator<Object> myItr = myHashSet.iterator(); // angular bracket is optional to specific type
         while (itr.hasNext())
         {
          syso(itr.next)
         }
+
 we use while loop because we dont know when the hasNext() method will turn false.
 since we need all the elements in the HashSet, we use while loop
 
@@ -190,14 +191,16 @@ hasNext() -> 1. go to next element after each iteration
 next() -> get the element
 ________________________________________________________________________________________________________________
 
-Map collection
+Map Collection
 ''''''''''''''
 
 HashMap
 ~~~~~~~
->We can store data in the form of key and value in a pair
->Other than hashmap, all types of collections are derieved from collection interface
->HashMap is derieved from Map Interface
+
+Notes -
+	>We can store data in the form of key and value in a pair
+	>Other than hashmap, all types of collections are derieved from collection interface
+	>HashMap is derieved from Map Interface
 
 >> The idea of hashmap is that they are a combination of Key, Value which is a pair <<
 Note - 1> The key shouldnt be repeated (If repeated with a value, then the recent value will be saved)
@@ -243,15 +246,15 @@ Checking if hashmap is empty
     	hm.isEmpty(); // returns a boolean
 
 Reading the whole pair of data by looping
-forloop---- not possible since there is no index
+forloop=> not possible since there is no index
     
-foreach loop---
+foreach loop=>
     	for(int i : hm.keySet()) 
       	{
           syso(i + " " + hm.get(i));        
       	}
 
-iterator loop---
+iterator loop=>
     	Iterator <Entry <Integer, String>> itr=hm.entrySet().iterator(); // adjusting return type for entryset 
       	while(itr.hasNext())
        	{
