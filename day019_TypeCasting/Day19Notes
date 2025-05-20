@@ -16,19 +16,19 @@ Primitive typecasting
       	  eg - short to byte
 
 Upcasting
-    int x = 100;
-    long l = x; // auto upcasting
+	int x = 100;
+    	long l = x; // auto upcasting
 
-    float f = 10.22F;
-    double d = f; // auto upcasting
+    	float f = 10.22F;
+    	double d = f; // auto upcasting
 
 Downcasting
-    long l = 12345667;
-    int i = l // not possible since long is bigger than int. we need to explicitly change the datatype
-    int i = (int) l; // correct downcasting
+    	long l = 12345667;
+    	int i = l // not possible since long is bigger than int. we need to explicitly change the datatype
+    	int i = (int) l; // correct downcasting
 
-    double d = 12.3231341;
-    float f = (float) d; // while reducing to smaller datatype, there is a possibility of data loss or truncation
+    	double d = 12.3231341;
+    	float f = (float) d; // while reducing to smaller datatype, there is a possibility of data loss or truncation
 ________________________________________________________________________________________________________________
 
 Object Typecasting
