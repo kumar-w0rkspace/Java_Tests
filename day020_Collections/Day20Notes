@@ -4,10 +4,11 @@ Day 20 - Collection and Map
 Collection
 ''''''''''
 
+>>Collections is a class<<
 A group of elements / items/ objects
 Collection is an interface(java.util)
 Root interface of all collection type
->>Collections is a class<<
+
 
 Collection is again classified into List and Set
 
