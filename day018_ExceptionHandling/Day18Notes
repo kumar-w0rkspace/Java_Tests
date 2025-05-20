@@ -1,162 +1,145 @@
-Day18
-=====
+Day18 - Exception Handling
+=========================
 
-Exception Handling
-------------------
-User inputs are a major cause of exceptions which should be handled
+Exception - An event that causes the program to terminate
+Handling exception - Whenever there could be an exception in a block of code,
+		     we handle that part by proper exception handling (direct or redirect to right path / output user friendly message etc)
 
-There are two types of mistakes in java -- > Errors and Exceptions
+Notes-
+	User inputs are a major cause of exceptions which should be handled
+	There are two types of mistakes in java - Errors and Exceptions
 
-Error 
+	Error=> Syntactical(Program wont execute)
+		Not following java syntax - coder missing a semicolon, or curly braces or case shift etc 
 
->Syntactical(Program wont execute) ->
-Not following java syntax --> coder missing a semicolon, or curly braces or case shift etc 
-
->Logical(Program will execute) ->
-Mistake in the coding logic -->Unexpected Output even if the program runs
-
-
-Exception
----------
->An event that causes the program to terminate
+	Logical=> Mistake in the coding logic(Program will execute)
+ 		  Unexpected Output even if the program runs
 
 >>Exception is not an error<<
+	Error comes from developer mistake
+	Exception comes from user mistake
 
-Error comes from developer mistake
-Exception comes from user mistake
-
-By default, if we get an exception, the rest of the code wil not execute and the program will terminate
-
-Handling exception-
-Whenever there could be an exception in a block of code, we handle that part by proper exception handling (direct or redirect to right path / output user friendly message etc)
+By default, if we get an exception, the rest of the code will not execute and the program will terminate	
 
 There are thousands of exceptions in java, but mostly can be classified into two
-1> Checked Exception -
-The exceptions those are identified by java compiler Eg: InterruptedException, FileNotFoundException, IOException etc
-2> Unchecked Exception -
-The exceptions that are not identified by java compiler Eg: ArithmeticException, NullPointerException, ArrayIndexOutOfboundsException etc
+	1> Checked Exception - The exceptions those are identified by java compiler
+			       Eg: InterruptedException, FileNotFoundException, IOException etc
+	2> Unchecked Exception -The exceptions that are not identified by java compiler
+			       Eg: ArithmeticException, NullPointerException, ArrayIndexOutOfboundsException etc
 
-Unchecked Exceptions
-------------------
-
-try, catch block
-~~~~~~~~~~~~~~~
-
+Unchecked Exceptions (try, catch)
+'''''''''''''''''''''''''''''''''
 The statements that could likely throw exceptions, we surround them in a try catch block
 
 eg
-    int a = 100;
-    int b = 0;
-    int c = a / b; // this line will throw arithmetic exception. so we wil surround it with try catch blocks
+    	int a = 100;
+    	int b = 0;
+    	int c = a / b; // this line will throw arithmetic exception. so we wil surround it with try catch blocks
 
-    try
-    {
-     int c = a/b;
-    }
-    catch (ArithmeticException e)
-    {
-     syso("Cannot divide by zero");
-    }
+    	try
+    	{
+     	  int c = a/b;
+    	}
+    	catch (ArithmeticException e)
+    	{
+     	  syso("Cannot divide by zero");
+    	}
 
 here the line int c = a/b will be executed and the exception message will be caught and the syso message will be displayed
 
+try, catch
+~~~~~~~~~~
+
 Syntax
-        try
+	try
         {
-            line of codes that could throw exception
+          line of codes that could throw exception
         }
         catch (exceptionclassname e)
         {
-            statements;
+          statements;
         }
         catch (exceptionclassname e)
         {
-            statements;
+          statements;
         }
-    
->>one try block can have many catch blocks
-general idea is that we should try to handle the proper exception name. if we cant, then add Exception in the last catch block
-since Exception is the parent class for all exceptions
+
+Note-   
+	One try block can have many catch blocks
+	General idea is that we should try to handle the proper exception name.
+	If we cant, then add Exception in the last catch block since Exception is the parent class for all exceptions
 
 
 finally block
 ~~~~~~~~~~~~~
-finally block will always execute regardless of an event of exception or not and its usually optional
->exception occured, catch block handled
->exception occured, catch block not handled
->exception not occured, catch block ignored
+Finally block will always execute regardless of an event of exception or not and its usually optional
+	exception occured, catch block handled
+	exception occured, catch block not handled
+	exception not occured, catch block ignored
 
 Syntax
         try
         {
-            line of codes that could throw exception
+          line of codes that could throw exception
         }
         catch (exceptionclassname e)
         {
-            statements;
+          statements;
         }
         catch (exceptionclassname e)
         {
-            statements;
+          statements;
         }
         finally
         {
-            statements;
+          statements;
         }
 
-If we want to execute any statements without depending on an exception, we use finally block
-
-Generally try catch finally block goes like this
-        try{}       -- > connection / open resources
-        catch(){}   -- > handle exceptions
-        finally{}   -- > close resources, connections
+Note-
+	If we want to execute any statements without depending on an exception, we use finally block
+	Generally try catch finally block goes like this
+          try{}       -- > connection / open resources
+          catch(){}   -- > handle exceptions
+          finally{}   -- > close resources, connections
 
 
 Checked Exceptions
-------------------
+''''''''''''''''''
 can be handled in two ways
-1> try catch
-2> throws
+	1> try catch
+	2> throws
 
-eg
-try catch
+syso("Start")
+Thread.sleep(5000); // here the thread.sleep will throw an interrupted exception if not managed and it will be pointed to us by Java(eclipse), so we surround it in a try catch block
+syso("Stop");
 
-    syso("Start")
-    
-    Thread.sleep(5000); // here the thread.sleep will throw an interrupted exception if not managed and it will be pointed to us by Java(eclipse)
-                        // so we surround it in a try catch block
-    syso("Stop");
+try catch usage
+	syso("Start")
+	try
+    	{
+          Thread.sleep(5000);
+    	}
+    	catch (InterruptedException e)
+    	{
+          syso(Exception occured);
+    	}
+>>>try catch is statement level<<<
 
-    ---------------
-    
-    syso("Start")
-
-    try
-    {
-        Thread.sleep(5000);
-    }
-    catch (InterruptedException e)
-    {
-        syso(Exception occured);
-    }
-
-eg
-throws
-
-        psvm(String []args) throws InterruptedException{ // we add InterruptedException with throws keyword to the method
-            
-        syso("Start")
+throws usage
+psvm(String []args) throws InterruptedException // we add InterruptedException with throws keyword to the method
+{ 
+       	syso("Start")
         Thread.sleep(5000);
         syso("Stop");
-
-If there are multiple exceptions to be thrown, we can just add them with a comma
-
-eg  psvm(String []args) throws InterruptedException, FileNotFoundException, IOException
-{ 
 }
-
->>>try catch is statement level<<<
 >>>throws is method level<<<
 
--END-
+Note - If there are multiple exceptions to be thrown, we can just add them with a comma
 
+eg 
+psvm(String []args) throws InterruptedException, FileNotFoundException, IOException
+{
+	codes; 
+}
+
+					    -----END-----
