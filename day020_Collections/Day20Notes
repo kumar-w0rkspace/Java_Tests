@@ -2,7 +2,7 @@ Day 20
 ======
 
 Collection and Map
-++++++++++++++++++
+''''''''''''''''''
 
 Collection (root interface of all collection type)
 -------------------------------------------------
@@ -36,6 +36,7 @@ Similarly there are some common methods in ArrayList and HashSet
 >We can store object type of data in collections(predefined / userdefined).
 >We CANNOT store primitive type data in collections
 >We can use wrapper class type to store primitive type (not needed for String which is non Primitive)
+________________________________________________________________________________________________________________
 
 ArrayList
 ~~~~~~~~~~
@@ -46,15 +47,13 @@ Properties
 	4> Multiple nulls       -> Allowed
 
 Decleration of Heterogenious data
-
-Type 1 > ArrayList myArrayList = new ArrayList();
-Type 2 > List myArrayList = new ArrayList();
+	Type 1 > ArrayList myArrayList = new ArrayList();
+	Type 2 > List myArrayList = new ArrayList();
 
 Declaration of Homogenious data
-
-Eg for integer type > ArrayList<Integer> myIntList = new ArrayList<Integer>();
-Eg for string type  > ArrayList<String> myStrList = new ArrayList<String>();
-Eg for Employee type > ArrayList<Employee> myEmpList = new ArrayList<Employee>(); 
+	Integer type > ArrayList<Integer> myIntList = new ArrayList<Integer>();
+	String type  > ArrayList<String> myStrList = new ArrayList<String>();
+	Employee type > ArrayList<Employee> myEmpList = new ArrayList<Employee>(); 
 
 Adding objects to ArrayList
 	myArrayList.add("Name");
@@ -76,7 +75,7 @@ Change or modify
     	myArrayList.set(4, "James") // will modify the current value at index 4 to "James"
 
 Printing single element
-    myArrayList.get(index); // prints the value at index
+	myArrayList.get(index); // prints the value at index
 
 Clear all elements from list
     	myArrayList.clear
@@ -92,7 +91,6 @@ Checking if the arraylist is empty or not
 
 
 Reading data from ArrayList
-
 >>forloop----
     	for(int i = 0; i<myArrayList.size(); i++)
      	{
@@ -111,14 +109,15 @@ Reading data from ArrayList
         {
           syso(itr.next)
         }
-we use while loop because we dont know when the hasNext() method will turn false.
-since we need all the elements in the arraylist, we use while loop
+
+>we use while loop because we dont know when the hasNext() method will turn false.
+>since we need all the elements in the arraylist, we use while loop
 
 hasNext() -> 1. go to next element after each iteration
              2. check if element exist or not
 
 next() -> get the element
-
+________________________________________________________________________________________________________________
 
 HashSet
 ~~~~~~~
@@ -129,66 +128,63 @@ Properties
 	4> Multiple null        -> Not Allowed
 
 Decleration of Heterogenious data
-
-Type 1 > HashSet myHashSet = new HashSet();
-Type 2 > Set myHashSet = new HashSet();
+	Type 1 > HashSet myHashSet = new HashSet();
+	Type 2 > Set myHashSet = new HashSet();
 
 Declaration of Homogenious data
-
-Eg for integer type > HashSet<Integer> myIntList = new HashSet<Integer>();
-Eg for string type  > HashSet<String> myStrList = new HashSet<String>();
-Eg for Employee type > HashSet<Employee> myEmpList = new HashSet<Employee>(); 
+	Integer type > HashSet<Integer> myIntList = new HashSet<Integer>();
+	String type  > HashSet<String> myStrList = new HashSet<String>();
+	Employee type > HashSet<Employee> myEmpList = new HashSet<Employee>(); 
 
 Adding objects (will not be in order)
-    myHashSet.add("Name");
-    myHashSet.add(123);
-    myHashSet.add("Name"); // duplicate not allowed. if forced duplication, itll show one value from duplicates
-    etc
+    	myHashSet.add("Name");
+    	myHashSet.add(123);
+    	myHashSet.add("Name"); // duplicate not allowed. if forced duplication, itll show one value from duplicates
+    	etc
 
 Printing the hashset
-    syso(myHashSet) // random order, remove duplicates
+    	syso(myHashSet) // random order, remove duplicates
 
 Removing element from HashSet
-    myHashSet.remove(value); // here no index concept, so we need to give the value to remove
+    	myHashSet.remove(value); // here no index concept, so we need to give the value to remove
 
 Inserting element
-    >>Inserting elements into hash collections, is simply not possible. since its not following indexing order<<
+    	>>Inserting elements into hash collections, is simply not possible. since its not following indexing order<<
 
 Access Specific element
-    >>Accessing elements from hash collections, is simply not possible. since its not following indexing order<<
+    	>>Accessing elements from hash collections, is simply not possible. since its not following indexing order<<
 
 Converting HashSet collection into ArrayList collection (workaround for adding index to an existing hashset)
-    ArrayList myArrayListTemp = new ArrayList(myHashSet);
-    myArrayListTemp.remove(index);
-    myArrayListTemp.add(index, value);
-    myArrayListTemp.get(index);
+    	ArrayList myArrayListTemp = new ArrayList(myHashSet);
+    	myArrayListTemp.remove(index);
+    	myArrayListTemp.add(index, value);
+    	myArrayListTemp.get(index);
 
 Size of set
-    myHashSet.size();
+	myHashSet.size();
 
 Clearing all elements from set
-    myHashSet.clear();
+    	myHashSet.clear();
 
 Check if the set is empty or not
-    myHashSet.isEmpty();
+    	myHashSet.isEmpty();
 
 
 Reading data from ArrayList
-
 forloop---- not possible since there is no index
     
 foreach loop---
-    for(Object obj:myHashSet) 
-      {
-        syso(obj);        
-      }
+	for(Object obj:myHashSet) 
+      	{
+          syso(obj);        
+      	}
 
 iterator loop---
-     Iterator<Object> myItr = myHashSet.iterator(); // angular bracket is optional to specific type
+     	Iterator<Object> myItr = myHashSet.iterator(); // angular bracket is optional to specific type
         while (itr.hasNext())
-         {
-          syso(itr.next)
-         }
+        {
+         syso(itr.next)
+        }
 we use while loop because we dont know when the hasNext() method will turn false.
 since we need all the elements in the HashSet, we use while loop
 
@@ -196,10 +192,10 @@ hasNext() -> 1. go to next element after each iteration
              2. check if element exist or not
 
 next() -> get the element
-
+________________________________________________________________________________________________________________
 
 Map collection
---------------
+''''''''''''''
 
 HashMap
 ~~~~~~~
@@ -251,7 +247,6 @@ Checking if hashmap is empty
     	hm.isEmpty(); // returns a boolean
 
 Reading the whole pair of data by looping
-
 forloop---- not possible since there is no index
     
 foreach loop---
@@ -268,4 +263,4 @@ iterator loop---
           syso(entry.getKey()+ " " + entry.getValue()); // the entry.getkey and entry.getvalue is called for each iteration             
        	}
 
--END-
+					-----END-----
