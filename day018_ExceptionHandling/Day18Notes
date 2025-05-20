@@ -24,7 +24,7 @@ By default, if we get an exception, the rest of the code will not execute and th
 There are thousands of exceptions in java, but mostly can be classified into two
 	1> Checked Exception - The exceptions those are identified by java compiler
 			       Eg: InterruptedException, FileNotFoundException, IOException etc
-	2> Unchecked Exception -The exceptions that are not identified by java compiler
+	2> Unchecked Exception - The exceptions that are not identified by java compiler
 			       Eg: ArithmeticException, NullPointerException, ArrayIndexOutOfboundsException etc
 
 Unchecked Exceptions (try, catch)
@@ -49,7 +49,6 @@ here the line int c = a/b will be executed and the exception message will be cau
 
 try, catch
 ~~~~~~~~~~
-
 Syntax
 	try
         {
@@ -68,7 +67,6 @@ Note-
 	One try block can have many catch blocks
 	General idea is that we should try to handle the proper exception name.
 	If we cant, then add Exception in the last catch block since Exception is the parent class for all exceptions
-
 
 finally block
 ~~~~~~~~~~~~~
@@ -96,11 +94,11 @@ Syntax
         }
 
 Note-
-	If we want to execute any statements without depending on an exception, we use finally block
-	Generally try catch finally block goes like this
-          try{}       -- > connection / open resources
-          catch(){}   -- > handle exceptions
-          finally{}   -- > close resources, connections
+If we want to execute any statements without depending on an exception, we use finally block
+Generally try catch finally block goes like this=>
+	try{}       -- > connection / open resources
+        catch(){}   -- > handle exceptions
+        finally{}   -- > close resources, connections
 
 
 Checked Exceptions
