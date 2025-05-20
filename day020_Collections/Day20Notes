@@ -1,16 +1,14 @@
-Day 20
-======
-
-Collection and Map
-''''''''''''''''''
+Day 20 - Collection and Map
+===========================
 
 Collection (root interface of all collection type)
 -------------------------------------------------
-Collection - a group of elements / items/ objects
-	>>Collection is an interface(java.util)
-	Collections is a class<<
+Collection
+	A group of elements / items/ objects
+	>>Collection is an interface(java.util)<<
+	>>Collections is a class<<
 
-Collection is again set into List and Set
+Collection is again classified into List and Set
 
         Collection (I)                      Map(I)
            /  \                               |
@@ -26,16 +24,15 @@ Collection is again set into List and Set
 List interface is implemented by ArrayList
 Set interface is implemented by HashSet
 
-There are some common methods in List and Set interfaces
-Similarly there are some common methods in ArrayList and HashSet
+Notes -
+	1> There are some common methods in List and Set interfaces
+	2> Similarly there are some common methods in ArrayList and HashSet
+	3> ArrayList specific methods might not be in HashSet and viceversa
+	4> There are more collections class - linkedlist, hashlinkedlist etc
 
->>ArrayList specific methods might not be in HashSet and viceversa<<
-
->There are more collections class - linkedlist, hashlinkedlist etc<<
-
->We can store object type of data in collections(predefined / userdefined).
 >We CANNOT store primitive type data in collections
->We can use wrapper class type to store primitive type (not needed for String which is non Primitive)
+>We CAN store object type of data in collections(predefined / userdefined).
+>We CAN use wrapper class type to store primitive type (not needed for String which is non Primitive)
 ________________________________________________________________________________________________________________
 
 ArrayList
@@ -89,7 +86,6 @@ Remove selected items from list
 Checking if the arraylist is empty or not
     	myArrayList.isEmpty(); // true if no elements in array
 
-
 Reading data from ArrayList
 >>forloop----
     	for(int i = 0; i<myArrayList.size(); i++)
@@ -98,7 +94,7 @@ Reading data from ArrayList
      	}
 
 >>foreach loop---
-    	for(Object obj:myArrayList) 
+    	for(Object obj: myArrayList) 
       	{
           syso(obj);        
       	}
