@@ -2,14 +2,19 @@ Day19- Typecasting
 ==================
 
 Typecasting means converting the data from one type to another type
+
 Two variants - 
 	Primitive Typecasting
 	Object Typecasting
 
+These are again classified into -
+	Upcasting
+	Downcasting
+
 Primitive typecasting
 ~~~~~~~~~~~~~~~~~~~~~
 
-2 kinds of Typecasting for primitve and object types
+2 kinds of Typecasting for primitive and object types
 	=>Upcasting / widening (Automatic process)
       	  Converting value from smaller to higher
       	  eg - int to long
@@ -19,6 +24,7 @@ Primitive typecasting
       	  eg - short to byte
 
 Upcasting
+---------
 	int x = 100;
     	long l = x; // auto upcasting
 
@@ -26,6 +32,7 @@ Upcasting
     	double d = f; // auto upcasting
 
 Downcasting
+-----------
     	long l = 12345667;
     	int i = l // not possible since long is bigger than int. we need to explicitly change the datatype
     	int i = (int) l; // correct downcasting
