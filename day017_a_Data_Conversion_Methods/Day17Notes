@@ -1,70 +1,65 @@
-Day17
-=====
-
-Wrapper class
--------------
+Day17 - Wrapper class
+====================
 
 In java we can store data in two formats
-> Primitive format
-> Object format
+	> Primitive format
+	> Object format
 
-eg. String s = "welcome"  -> variable format
-    String s = new String("welcome") - > object format
+Example
+	String s = "welcome"  -> variable format
+    	String s = new String("welcome") - > object format
 
-    int x = 100;  -> variable format
-    Integer x = new INTEGER(100);  -> deprecated object format
+    	int x = 100;  -> variable format
+    	Integer x = new Integer(100);  -> deprecated object format
 
-for every primitive type there is a wrapper class
-
-int	--> Integer
-float	--> Float
-double	--> Double
-char	--> Character
-Boolean	--> Boolean
-short	--> Short
-long	--> Long
+For every primitive type there is a wrapper class
+	int	--> Integer
+	float	--> Float
+	double	--> Double
+	char	--> Character
+	Boolean	--> Boolean
+	short	--> Short
+	long	--> Long
 
 Advantages with wrapper class
-1> we can create a variable with object format
-2> we can convert one format to another format
+	1> we can create a variable with object format
+	2> we can convert one format to another format
 
-uses of converting format
-
+Uses of converting format
 eg-
-    String price1 = "20";
-    String price2 = "30";
-    price1 + price2 will only give string concatenation (2030)
-    but, we can convert the string to numeric and add
+    	String price1 = "20";
+    	String price2 = "30";
+    	price1 + price2 will only give string concatenation (2030)
+    	but, we can convert the string to numeric and add
 
-syntax >> int total = Integer.parseInt(price1) + Integer.parseInt(price2);
-          here, we convert the string values to integer and add
+Syntax
+	int total = Integer.parseInt(price1) + Integer.parseInt(price2);
+        // here, we convert the string values to integer and add
 
-String to int       Integer.parseInt(String value)
-String to decimal   Double.parseDouble(String value)
-String to boolean   Boolean.parseBoolean(String value)
-String to char      ==> NOT POSSIBLE (cant convert multiple characters to single character)
+String to int       =>Integer.parseInt(String value)
+String to decimal   =>Double.parseDouble(String value)
+String to boolean   =>Boolean.parseBoolean(String value)
+String to char      =>NOT POSSIBLE (cant convert multiple characters to single character)
 
-Vice versa
-
-int, double, boolean, char to String
+Vice versa - int, double, boolean, char to String
 String.valueOf(int)     -> this converts an integer to string
 String.valueOf(double)  -> this converts an double to string
 String.valueOf(char)    -> this converts an char to string
 etc..
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+________________________________________________________________________________________________________________
 
 Packages
----------
-
-In java, packages means folders
-The use of packages is to organise the files properly
+''''''''
+Notes
+	>In java, packages means folders
+	>The use of packages is to organise the files properly
 
 There are two kinds of packages in java
-1> built in
-2> user defined
+	1> built in
+	2> user defined
 
-built in packages have built in methods.
+Built in packages have built in methods.
 we can use built in class methods by importing from the package where the class is defined
 
 eg - 
@@ -73,25 +68,27 @@ Arrays  => import java.util.Arrays
 Random  => import java.util.Random
 etc
 
->>check packages and folder structure on day17<<
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++++++++++++++++++++++++++++++++++++++++++++++++
+  >>check packages and folder structure on day17<<
+ ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+________________________________________________________________________________________________________________
 
 Access Modifiers
-----------------
-
+''''''''''''''''
 There are 4 types of access modifiers
 
-Public      ->can be accessed everywhere within the project without inheritance
-Protected   ->can be accessed outside the package but only via inheritance
-Default     ->can be accessed within the package for all class // no need to mention the default keyword
-Private     ->can be accessed only within the class
+Public      -> can be accessed everywhere within the project without inheritance
+Protected   -> can be accessed outside the package but only via inheritance
+Default     -> can be accessed within the package for all class // no need to mention the default keyword
+Private     -> can be accessed only within the class
 
 Structure of java projects
 p - packages (p1, p2, p3... pn)
 c - class (c1, c2, c3....cn)
  _______________________________
 |                               | 
-|          Java Project         |            |
+|          Java Project         |
 |     _________     _________   |
 |    | ____    |   | ____    |  |
 |    | |C1| P1 |   | |C2| P2 |  | 
@@ -100,4 +97,4 @@ c - class (c1, c2, c3....cn)
 |                               |
 |_______________________________|
 
--END-
+					    -----END-----
