@@ -2,7 +2,6 @@ Day15 - Method Overriding (Inheritance)
 =======================================
 
 Process of changing the method definition of an inherited class is called method over riding
-
 Rules -
 	should not change the declaration part
     	only implementation part should change
@@ -132,16 +131,9 @@ class Test2 extends Test
 
 final class
 -----------
-final class Test
-{
+final class Test {}
 
-}
-
-class TestTwo extends Test  // will throw error since the class Test is final and cannot be extended
-{
-
-}
-
+class TestTwo extends Test {} // will throw error since the class Test is final and cannot be extended
 ________________________________________________________________________________________________________________
 
 Super Keyword
