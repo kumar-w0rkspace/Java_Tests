@@ -1,65 +1,63 @@
-Day15
-=====
+Day15 - Method Overriding (Inheritance)
+=======================================
 
-Method Overriding (inheritance)
--------------------------------
+Process of changing the method definition of an inherited class is called method over riding
 
->Process of changing the method definition of an inherited class is called method over riding
-
-Rules ->
-    should not change the declaration part
-    only implementation part should change
-    should have an inherited class
+Rules -
+	should not change the declaration part
+    	only implementation part should change
+    	should have an inherited class
 
 Example - 
 class A 
 {
-  void method1() 
-  {
-  syso("hello")
-  }
+	void method1() 
+  	{
+  	  syso("hello")
+  	}
 }
 
-	class B extends A 
-	{
-          void method1() 
-	  { 
-            syso("Overrided method")
-          }
+   class B extends A 
+   {
+   	void method1() 
+	{ 
+          syso("Overrided method")
         }
+   }
 
-Here, method1 from class A has a definition. This same method will be implemented to Class B when using inheritance
-But in class B, we changed the definition of method1. --> this is overriding the method definition
+Note -
+	Here, method1 from class A has a definition. This same method will be implemented to Class B when using inheritance
+	But in class B, we changed the definition of method1. --> this is overriding the method definition
 
 Overloading and Overriding
-------------------------
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 eg - 
 class One 
 {
-  void m1(int a)
-  {
-    syso(a)
-  }
+	void m1(int a)
+  	{
+    	syso(a)
+  	}
        
-  void m2 (int b)
-  {
-    syso(b)
-  }
+void m2 (int b)
+{
+	{ 
+   	 syso(b)
+  	}
 }
 
-	class Two extends One
+class Two extends One
+{
+	void m1(int a)
         {
-          void m1(int a)
-           {
-            syso(a*a)   // here we over ride the method1(m1) definition from class One 
-           }            
+          syso(a*a)   // here we over ride the method1(m1) definition from class One 
+        }            
 
-          void m2 (int a, int b) // here we overload the method2(m2) method itself
-           {
-            syso(a + b)  
-           }
-         }
+        void m2 (int a, int b) // here we overload the method2(m2) method itself
+        {
+          syso(a + b)  
+        }
+}
 
 PSVM
 {
@@ -75,83 +73,89 @@ PSVM
 
 
 OverRiding ->
-    >Possible only in inherited multiple classes
-    >Should NOT change the signature of method, but body can be changed
-    >Method names are same
-    >Belongs to Inheritance
+	> Possible only in inherited multiple classes
+     	> Should NOT change the signature of method, but body can be changed
+    	> Method names are same
+    	> Belongs to Inheritance
 
 OverLoading ->
-    >Possible in single and multiple(inherited) classes
-    >Should change the signature of method
-    >Method names are same
-    >Belongs to Polymorphism
+    	> Possible in single and multiple(inherited) classes
+    	> Should change the signature of method
+    	> Method names are same
+    	> Belongs to Polymorphism
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+________________________________________________________________________________________________________________
 
 Final keyword
--------------
-> can be applied to class, variables and methods
+'''''''''''''
+Note -
+can be applied to 
+	class
+	variables
+	methods
 
 Advantage -> security and privacy
 
 three types 
-1> final variable -> cannot change the value of variable (constant)
-2> final method -> cannot override the method in child class
-3> final class -> cannot extend the class 
+	1> final variable -> cannot change the value of variable (constant)
+	2> final method -> cannot override the method in child class
+	3> final class -> cannot extend the class 
 
-final variable eg- 
------------------
+final variable 
+--------------
 class Test
 {
-  final int x = 100;
+  	final int x = 100;
 }
 
 psvm
 {
-   Test test = new Test();
-   test.x = 200 // will return error since the x variable is final
+   	Test test = new Test();
+   	test.x = 200 // will return error since the x variable is final
 }
 
-final method eg
-----------------
-
+final method
+------------
 class Test
 {
-  final void m()
-  {
-  }
+  	final void m()
+  	{
+  	}
 }
 
 class Test2 extends Test
- {
-   void m()  // will return error since the method m is final in class Test is final
-     {
-     }
+{
+   	void m()  // will return error since the method m is final in class Test is final
+     	{
+     	}
+}
 
-final class eg
---------------
-
+final class
+-----------
 final class Test
 {
+
 }
 
 class TestTwo extends Test  // will throw error since the class Test is final and cannot be extended
 {
+
 }
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+________________________________________________________________________________________________________________
 
 Super Keyword
--------------
+'''''''''''''
 
->Always refers to the immediate parent class
+Note -
+	Always refers to the immediate parent class
+	If we need to create an object on child class which is overridden and get the method from parent class, we use super keyword
+	Super keyword will be used to invoke the immediate parent class variable and immediate parent class method
 
-if we need to create an object on child class which is overridden and get the method from parent class, we use super keyword
-
-eg:
-
+eg
 class Animal
 {
-   String color = "Black"
+   	String color = "Black"
 	void eat()
 	{
           syso(eating....)
@@ -164,41 +168,39 @@ class Dog extends Animal
 
         void display()
 	{
-         syso(color)
+          syso(color)
         }
   
         void eat ()
 	{
-	syso(eating meat...)
+	  syso(eating meat...)
 	}
 }
 
 class Cat extends Animal 
 {
-   String color = "Brown";
+   	String color = "Brown";
 	void display()
 	{
-	syso(super.color) // using super keyword, we can get the color variable from parent class
+	  syso(super.color) // using super keyword, we can get the color variable from parent class
 	}
         
 	void eat()
 	{ 
          syso (eating fish...)
          super.eat();  // using super keyword, we can get the method from parent class
-
 	}
 }
 
 psvm
 {
-    Dog dog = new Dog()
-    dog.display;
-    dog.eat;
+    	Dog dog = new Dog()
+    	dog.display;
+    	dog.eat;
 
-    Cat cat = new Cat()
-    cat.display;  // White instead of brown since we used super keyword. so it refers to immediate parent attribute
-    cat.eat;      // eating fish... and eating... will be output since we used super.eat also to the eat method for Cat
+    	Cat cat = new Cat()
+    	cat.display;  // White instead of brown since we used super keyword. so it refers to immediate parent attribute
+    	cat.eat;      // eating fish... and eating... will be output since we used super.eat also to the eat method for Cat
 }
---> Super keyword will be used to invoke the immediate parent class variable and immediate parent class method
 
--END-
+					    -----END-----
