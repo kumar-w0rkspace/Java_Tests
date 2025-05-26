@@ -19,7 +19,6 @@ We can achieve polymorphism in java using Method Overloading
 
 Why we need overloading?
 ------------------------
-
 Type 1
 	addTwo (int a, intb)                      --->  addTwo(10, 20)
 	addThree (int a, int b, int c)            --->  addThree(10, 20, 30)

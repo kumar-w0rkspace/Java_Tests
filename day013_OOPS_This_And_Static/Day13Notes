@@ -1,12 +1,10 @@
 Day13 - This, Static
 ====================
-
 This
 ''''
 There are two types of variables
 	> local variable // method, constructor, main method
 	> class variable // instance variable
-
 >>There are no global variable in java<<
 
 package packname;
@@ -23,9 +21,8 @@ public class ClassName
 
 public static void main (string [] args) 
 {
-  ClassName cn = new ClassName(100,200); // local variable
+  	ClassName cn = new ClassName(100,200); // local variable
 }
-
 ________________________________________________________________________________________________________________
 
 Static
@@ -130,6 +127,7 @@ class whatever
 ________________________________________________________________________________________________________________
 
 public static void main examples
+--------------------------------
 
 --->  	public static void main (String [] args) { }  // VALID
 	the JVM looks for the method named main with no return type and is accessible everywhere (public) and is of static type
