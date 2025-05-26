@@ -1,6 +1,5 @@
 Day18 - Exception Handling
 =========================
-
 Exception - An event that causes the program to terminate
 Handling exception - Whenever there could be an exception in a block of code,
 		     we handle that part by proper exception handling (direct or redirect to right path / output user friendly message etc)
