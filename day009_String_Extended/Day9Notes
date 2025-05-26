@@ -1,6 +1,5 @@
 Day9 - Strings and Arrays
 ========================
-
 String Methods
 ~~~~~~~~~~~~~~
 1 - Reverse a string
@@ -69,7 +68,6 @@ difference between
 
  == and .equals()
 -----------------
-
 String s1 = "Welcome";
 String s2 = "Welcome";
 
