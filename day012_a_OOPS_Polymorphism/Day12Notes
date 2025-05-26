@@ -3,7 +3,6 @@ Day12 - Polymorphism
 Polymorphism - One thing having many forms is having 
 eg:
 	water --> ice, steam, vapour etc
-
 We can achieve polymorphism in java using Method Overloading
 
 2 types of overloading

@@ -1,6 +1,5 @@
 Day16 - Data Abstraction
 ========================
-
 Process of hiding implementation details and only showing functionality to the user.
 Reasons -
 	Security

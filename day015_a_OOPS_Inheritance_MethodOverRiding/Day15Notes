@@ -1,6 +1,5 @@
 Day15 - Method Overriding (Inheritance)
 =======================================
-
 Process of changing the method definition of an inherited class is called method over riding
 Rules -
 	should not change the declaration part
