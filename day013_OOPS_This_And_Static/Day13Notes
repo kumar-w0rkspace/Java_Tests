@@ -1,26 +1,24 @@
-DAY 13
-=====
+Day13 - This, Static
+====================
 
-this keyword
-------------
-
+This
+''''
 There are two types of variables
-> local variable // method, constructor, main method
-> class variable // instance variable
+	> local variable // method, constructor, main method
+	> class variable // instance variable
 
 >>There are no global variable in java<<
 
 package packname;
-  int x, y; // Not possible in java to set global variable
-   
+  	int x, y; // Not possible in java to set global variable
 public class ClassName 
 {
-  int x, y; // class variables
+	int x, y; // class variables
 	ClassName(int x, int y) // local variables
-	{
-  	x=x;  // java don't understand which x is class or local. so we use THIS keyword to point to class variable
-  	y=y;
-	}    
+	  {
+  	    x=x;  // java don't understand which x is class or local. so we use THIS keyword to point to class variable
+  	    y=y;
+	  }    
 }    
 
 public static void main (string [] args) 
@@ -28,94 +26,97 @@ public static void main (string [] args)
   ClassName cn = new ClassName(100,200); // local variable
 }
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+________________________________________________________________________________________________________________
 
-static keyword
---------------
-
-static keyword applies for variables and methods
-
+Static
+''''''
+Static keyword applies for variables and methods
 4 types
-    >static variable
-    >non static variable
-    >static  method
-    >non static method
+    	>static variable
+    	>non static variable
+    	>static  method
+    	>non static method
 
 WHEN?
-We use static keyword when all the objects have same property (Common / shared)
+-----
+	We use static keyword when all the objects have same property (Common / shared)
 
 WHY?
-To save time while updating a variable and for ease of modification
+----
+	To save time while updating a variable and for ease of modification
 
 WHAT USE?
-It will save memory and share the same memory locations with all objects
+--------
+	It will save memory and share the same memory locations with all objects
 
 Restrictions>>
-If any data is common across multiple objects then only we use static keyword.
-Otherwise it is not recomended
+	>If any data is common across multiple objects then only we use static keyword.
+	Otherwise it is not recommended
 
 Example
 
 Class Employee()
 {
-  name;
-  id;
-  static company;
+  	name;
+  	id;
+  	static company;
 }
 
-here name, id will be different, but company will be same across the employee objects. we can use static there.
-The static company name memory will be shared among all the employee objects
+Note - 
+	Here name, id will be different, but company will be same across the employee objects. 
+	we can use static there.
+	The static company name memory will be shared among all the employee objects
 
-Access level restrictions 
->> static variables and methods can be accessed without creating an object. (inside main method)
->> static methods can access non static method/ variable only through an object
->> non static methods can access everything directly through object
->> when we have main method also in same class, we can access the methods or variables.
-    but when the main method is in another class, we need to specify the class of static method / variable also
+Access level restrictions -
+	>> static variables and methods can be accessed without creating an object. (inside main method)
+	>> static methods can access non static method/ variable only through an object
+	>> non static methods can access everything directly through object
+	>> when we have main method also in same class, we can access the methods or variables.
+    	>> But when the main method is in another class, we need to specify the class of static method / variable also
 
 example -
 public class TestMethod  // testmethod class
 {
-  static int a;
+  	static int a;
 }            
 	void m1()
         {
-         Syso("hello");               
+          Syso("hello");               
         }                
 
 
 public class TestMethodTwo   // testmethodtwo class  - to access the static a, we need to mention the class name
 {
-    public static void main (String [] args)
-    {
-      Syso(TestMethod.a); // calling TestMethod class then the static variable a
-      TestMethod.m1();  // calling TestMethod class then the static method m1()
-    }
+    	public static void main (String [] args)
+    	{
+      	  Syso(TestMethod.a); // calling TestMethod class then the static variable a
+      	  TestMethod.m1();  // calling TestMethod class then the static method m1()
+    	}
 }
 
----------------------------------------------------------------------------------------------
+________________________________________________________________________________________________________________
 
 Examples 1
 
 class Test 
 {
-   static String s = "welcome";
+   	static String s = "welcome";
 }
 
 class FindLength
 {
 	psvm
 	{
- 	 Test.s.length(); // here length() method is defined in the String class and we invoking it for the static string s from Test class
+ 	  Test.s.length(); // here length() method is defined in the String class and we invoking it for the static string s from Test class
 	}
 }
-................................
+________________________________________________________________________________________________________________
 
 Examples 2
 
 class System
 {
-  static PrintStream out;
+  	static PrintStream out;
 }
 
 class whatever 
@@ -126,27 +127,27 @@ class whatever
 	}
 }
 
--------------------------------------------------------------------------------------
+________________________________________________________________________________________________________________
 
-psvm examples
+public static void main examples
 
---->  public static void main (String [] args) { }  // VALID
-the JVM looks for the method named main with no return type and is accessible everywhere (public) and is of static type
+--->  	public static void main (String [] args) { }  // VALID
+	the JVM looks for the method named main with no return type and is accessible everywhere (public) and is of static type
 
----> static public void main (String [] args) { }  // VALID
-it don't matter if public and static is interchanged, it just have to be there
+---> 	static public void main (String [] args) { }  // VALID
+	it don't matter if public and static is interchanged, it just have to be there
 
----> public void static main (String [] args) { } // INVALID
-return type should be always before the name
+---> 	public void static main (String [] args) { } // INVALID
+	return type should be always before the name
 
----> void main (String [] args) public static { } // INVALID
-curly braces {} should start right after the method definition ()
+---> 	void main (String [] args) public static { } // INVALID
+	curly braces {} should start right after the method definition ()
 
----> public static void main (int [] a) { } // VALID but it wont run
-JVM looks for string array type for running
+---> 	public static void main (int [] a) { } // VALID but it wont run
+	JVM looks for string array type for running
 
----> public static void main (String [] a) { } // VALID, and will run
-args , a, name, what ever it is, its just name and JVM looks for string type array. it can be any name.
-just like a variable can be any name
+---> 	public static void main (String [] a) { } // VALID, and will run
+	args, a, name, what ever it is, its just name and JVM looks for string type array.
+	it can be any name, just like a variable can be any name
 
--END-
+					    -----END-----
