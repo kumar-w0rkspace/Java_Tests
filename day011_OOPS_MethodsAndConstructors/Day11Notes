@@ -1,6 +1,5 @@
 Day 11 - Methods & Constructors
 ==============================
-
 Method
 ''''''
 WHAT?
@@ -122,7 +121,7 @@ Note-
 
 
 DIFFERENCE B/W METHOD AND CONSTRUCTOR
-
+------------------------------------
 Method
 ~~~~~~
 	1. Method name can be anything

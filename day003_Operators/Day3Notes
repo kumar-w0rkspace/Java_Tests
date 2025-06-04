@@ -6,9 +6,8 @@ A symbol that performs an operations
 int a = 10;
 int b = 20;
 int result = a+b;
-
-+, =  are operators
-a, b are operands
+	+, =  are operators
+	a, b are operands
 
 Different type of operator
 	>arithmetic operators    (b) + - * / %

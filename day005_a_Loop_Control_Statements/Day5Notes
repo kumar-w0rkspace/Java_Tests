@@ -1,6 +1,5 @@
 Day5 - Control Statements - Loops
 =================================
-
 Looping / Iteration 
 --------------------
 >> While loop
@@ -50,7 +49,7 @@ for( initialization; condition; inc/dec)
 ________________________________________________________________________________________________________________
 
 Jumping Statements 
-~~~~~~~~~~~~~~~~~~
+''''''''''''''''''
 	> Break values will exit from the loop.
 	> After break, we should not execute any other statement.
 	> Continue values will skip the at present value and proceed to the inc/dec. 

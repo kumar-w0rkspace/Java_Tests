@@ -147,7 +147,6 @@ public static void main (String [] args)
     	myMain.main("Jack"); // overload 2
     	myMain.main("James", "John"); // overload 3
 }         
-
 ________________________________________________________________________________________________________________
 
 Encapsulation

@@ -90,7 +90,6 @@ Note - when to use
 	Child ch = new Child(); >> we use this when we know what datatype is to be expected
 	Parent pr = new Child(): >> we use this when we dont know what datatype is to be expected, so we use the parent class
 
-
 3 rules to follow while downcasting to avoid errors
 	Cat ct = (Cat) an
 	 A   b     C    d

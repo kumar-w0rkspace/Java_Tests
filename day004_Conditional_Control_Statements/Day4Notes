@@ -6,7 +6,6 @@ Control Statements -
 	2) Looping / Iteration ------> while, do while, for loop
 	3) jumping Statements -------> break, continue
 
-
 Conditional Statements 
 ======================
 1> if
@@ -23,6 +22,7 @@ if (condition)
     Statements;
 }
 ________________________________________________________________________________________________________________
+
 if else 
 ------
 check for condition till its true, or execute the else block 
@@ -36,6 +36,7 @@ else
     Statements;
 }
 ________________________________________________________________________________________________________________
+
 if else if (if else ladder)
 ---------------------------
 
@@ -62,6 +63,7 @@ else
     Statements;
 }
 ________________________________________________________________________________________________________________
+
 nested if else
 -------------
 
@@ -83,6 +85,7 @@ else
 Statements;
 }
 ________________________________________________________________________________________________________________
+
 switch case break
 ----------------
 We switch the variable to check for cases.

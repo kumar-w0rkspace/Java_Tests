@@ -1,5 +1,5 @@
 Day2 - Variables & Data types
-======
+=============================
 Variable - container that can hold data
 Data type - which type of container
 
@@ -9,14 +9,14 @@ Two type of data types ->
 	Non Primitive
 
 Primitive
----------
+~~~~~~~~~
 byte, short, int, long 	---> numbers without decimal
 float, double 		---> decimal numbers
 char 			---> single character 'x'
 boolean 		---> true/ false
 
 Non primitive/ Derived/ Collections
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 String
 ArrayList
 HashMap

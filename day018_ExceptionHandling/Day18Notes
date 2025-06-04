@@ -99,7 +99,6 @@ Generally try catch finally block goes like this=>
         catch(){}   -- > handle exceptions
         finally{}   -- > close resources, connections
 
-
 Checked Exceptions
 ''''''''''''''''''
 can be handled in two ways
