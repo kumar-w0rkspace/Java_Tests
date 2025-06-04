@@ -1,21 +1,19 @@
-Day 2
+Day2 - Variables & Data types
 ======
-
-variables & data types
----------------------
-
-variable is a container that can hold data
+Variable - container that can hold data
+Data type - which type of container
 
 before creating variable we need to mention the data type
-
-Two type of data types -> Primitive and Non Primitive
+Two type of data types -> 
+	Primitive
+	Non Primitive
 
 Primitive
 ---------
-byte, short, int, long ---> numbers without decimal
-float, double ---> decimal numbers
-char ---> single character 'x'
-boolean ---> true/ false
+byte, short, int, long 	---> numbers without decimal
+float, double 		---> decimal numbers
+char 			---> single character 'x'
+boolean 		---> true/ false
 
 Non primitive/ Derived/ Collections
 ----------------------------------
@@ -36,16 +34,12 @@ double      8 bytes     fractional numbers upto 15 decimal
 boolean     1 bit       true or false
 char        2 bytes     Single char / letter
 
-
-Java is statically typed prog language
-python is dynamic
+>>Java is statically typed prog language<<
+python is dynamic (in python we don't specify the data type explicitly)
 
 eg:
-
 int x = 100;
 x="welcome"    // this is not possible in java but can in python
 in java we can change the value, but not the data type
 
-in python we don't specify the data type explicitly
-
--END-
+					    -----END-----

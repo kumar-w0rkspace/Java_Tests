@@ -1,34 +1,32 @@
-DAY 5
-=====
+Day5 - Control Statements - Loops
+=================================
 
 Looping / Iteration 
 --------------------
-
 >> While loop
 >> Do while loop
 >> For loop
 >> Enhanced For loop/ For Each loop (Collections/ Hashmaps)
 
-
 Where to use what.
-> If you know the number of iterations in advance, the for loop is often used for most cases.
-> If you want to execute the loop atleast once, the do-while loop is appropriate.
-> if you are uncertain about the number of iterations and the loop termination is based on a condition, the while loop is a good choice. (with the help of break keyword)
-
+	> If you know the number of iterations in advance, the for loop is often used for most cases.
+	> If you want to execute the loop atleast once, the do-while loop is appropriate.
+	> If you are uncertain about the number of iterations and the loop termination is based on a condition, the while loop is a good choice. (Caution infinite loops)
 
 while loop
-++++++++++
-execute the statements inside the while block until the condition is true
+----------
+Execute the statements inside the while block until the condition is true
 
+initialisation
 while(condition)
 {
     statements;
     inc/dec;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+________________________________________________________________________________________________________________
 
 do.. while loop
-+++++++++++++++
+---------------
 execute the statements inside do block once, then check for the while condition and execute it till the condition is true
 
 do
@@ -37,25 +35,24 @@ do
     inc/dec;
 }
     while(condition);
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+________________________________________________________________________________________________________________
 
 for loop
-++++++++
-80 to 90 % of time we use for loop
-initialise a value, then check the condition with the value, and increment or decrement(other arithmetic operations also)
-each time the initialisation value changes, execute the codes inside for block
+--------
+	80 to 90 % of time we use for loop
+	initialise a value, then check the condition with the value, and increment or decrement(other arithmetic operations also)
+	each time the initialisation value changes, execute the codes inside for block
 
 for( initialization; condition; inc/dec)
 {
     statements;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+________________________________________________________________________________________________________________
 
 Jumping Statements 
-------------------
+~~~~~~~~~~~~~~~~~~
+	> Break values will exit from the loop.
+	> After break, we should not execute any other statement.
+	> Continue values will skip the at present value and proceed to the inc/dec. 
 
-> Break values will exit from the loop.
-> After break, we should not execute any other statement.
-> Continue values will skip the at present value and proceed to the inc/dec. 
-
--END-
+					    -----END-----

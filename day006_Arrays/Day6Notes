@@ -12,27 +12,25 @@ Arrays -
 	>in arrays index number start from 0
 	>if the size of array is 5(n), there will be 5-1(n-1) index number (0,1,2,3,4)
 
-
 2 Types of Array
 	single dimensional
 	two dimensional/multi dimensional
 
-
 Single dimensional array (rows)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Declaring an array -
+1. declaring an array -
 	int a[]=new int[5]; or int []a
 
-add values into an array - 
+2. add values into an array - 
 	a[0]=100;
 
-find size(Length) of an array - 
+3. find size(Length) of an array - 
 	a.length
 
-read single value from an array - 
+4. read single value from an array - 
 	System.out.println(a[2]);
 
-read multiple values from an array - 
+5. read multiple values from an array - 
 	for (int i =0;i<=a.length-1;i++) // using = or <= depends on the array size(n and n-1)
 	{
 	  Sys.O(a[i]) 
@@ -51,21 +49,21 @@ Printing multiple elements in array
 
 Two Dimensional array (rows and column)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Declaring an array - 
+1. declaring an array - 
 	int a[][]=new int[5][4] 
 	int [][]a 
 	int []a[]
 
-add values into an array - 
+2. add values into an array - 
 	int b[][]= {	{10,20}, {30,40},  {50,60},  {70,80}		};
 
-find size of a multi array - 
+3. find size of a multi array - 
 	System.out.println("Length of rows "+b.length); //vertical System.out.println("Length of columns "+b[0].length); //horizontal
 
-read single value from a multi array - 
+4. read single value from a multi array - 
 	System.out.println(a[2][0]);
 
-read multiple values from a multi array - 
+5. read multiple values from a multi array - 
 Type 1 - nested forloop
    	for (int row=0;row<=b.length-1;row++)
  	{             //row loop
@@ -87,17 +85,12 @@ Type 2 - enhanced forloop
 
 ________________________________________________________________________________________________________________
 
-Debug mode steps
-===============
-Toggle breakpoint where we want to debug -> 
-degub as java application -> 
-F6 for each step -> 
-look for variable changes to debug
-
-ArrayList example - Storing different type of data in array
-//To create hetrogenious data in array we need Object type variable
-//Object is a predefined class in java just like String
-//It is actually a root class. all other class are derived from same object class. (Superclass)
+ArrayList example
+=================
+Storing different type of data in array
+	//To create hetrogenious data in array we need Object type variable
+	//Object is a predefined class in java just like String
+	//It is actually a root class. all other class are derived from same object class. (Superclass)
 
 byte     \ 
 short     \
@@ -120,5 +113,12 @@ printing values using for loop for object array
 printing with enhanced for loop for object array
 	for (Object x:a)
 	System.out.println(x);
+
+Debug mode steps
+===============
+Toggle breakpoint where we want to debug -> 
+degub as java application -> 
+F6 for each step -> 
+look for variable changes to debug
 
 					    -----END-----

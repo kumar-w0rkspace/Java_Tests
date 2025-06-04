@@ -1,38 +1,30 @@
-Day 4
-=====
+Day4 - Control Statements - Conditions
+======================================
 
-Control Statements
-------------------
-
-1) Conditional Statements ---> if, if else, nested if, switch case break
-2) Looping / Iteration ------> while, do while, for loop
-3) jumping Statements -------> break, continue
+Control Statements -
+	1) Conditional Statements ---> if, if else, nested if, switch case break
+	2) Looping / Iteration ------> while, do while, for loop
+	3) jumping Statements -------> break, continue
 
 
 Conditional Statements 
-----------------------
-
->> if
->> if else
->> nested if else
->> switch case break
-
+======================
+1> if
+2> if else
+3> nested if else
+4> switch case break
 
 if
-+++
-
+--
 this will be executed only if the condition is true
 
 if (condition)
 {
     Statements;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+________________________________________________________________________________________________________________
 if else 
-+++++++
-
+------
 check for condition till its true, or execute the else block 
 
 if (condition)
@@ -43,11 +35,9 @@ else
 {
     Statements;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+________________________________________________________________________________________________________________
 if else if (if else ladder)
-++++++++++++++++++++++++++
+---------------------------
 
 check for if and else if conditions till its true, or execute the else block 
 
@@ -71,10 +61,9 @@ else
 {
     Statements;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-
+________________________________________________________________________________________________________________
 nested if else
-++++++++++++++
+-------------
 
 adding an if else statement inside one if else is called nested if else
 
@@ -93,10 +82,13 @@ else
 {
 Statements;
 }
-
-
+________________________________________________________________________________________________________________
 switch case break
-+++++++++++++++++
+----------------
+We switch the variable to check for cases.
+If any case matches, it will execute the line of code for those case.
+Break jumps out of the loop
+Default is same as else in if else if condition
 
 switch(variable)
 {
@@ -109,7 +101,4 @@ switch(variable)
     default : statements;
 }
 
-we switch the variable to check for cases. if any case matches, it will execute the line of code for those case.
-break jumps out of the loop, default is same as else in if else if condition
-
--END-
+					    -----END-----
